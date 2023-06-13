@@ -155,89 +155,7 @@ body {
   width: 15%;
 }
 
-/* Стилі для списку запчастин  */
-
-.block {
-  display: none;
-}
-
-.card {
-  width: 100%;
-}
-
-.block h2 {
-  text-align: center;
-  margin-top: 0;
-}
-
-.block input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  background-color: #3b3b3b;
-  border: none;
-  border-radius: 20px;
-  color: #fff;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.card {
-  background-color: #3b3b3b;
-  color: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px;
-  width: 100%;
-  border-radius: 8px;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  border-radius: 8px; /* Заокруглені кути для фото */
-}
-
-.card h3,
-.card p {
-  margin-top: 10px;
-  transition: color 0.3s;
-}
-
-.card button {
-  background-color: #c00000;
-  color: #ffffff;
-  border: none;
-  margin-top: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 20px; /* Заокруглені кути для кнопки */
-}
-
-.card:hover {
-  background-color: #c00000;
-}
-
-.card:hover h3,
-.card:hover p,
-.card:hover button {
-  color: #ffffff;
-}
-
-.card:hover button {
-  background-color: #fff;
-  color: #1d1d1c;
-}
-
-.parts-block-name {
-  color: #fff;
-  margin-bottom: 15px;
-}
+/* Стилі для Хедера */
 
 .header {
   background: linear-gradient(
@@ -374,109 +292,91 @@ body {
   display: none;
 }
 
-/* Блок Запчастин */
+/* Блок Запчастини */
 
-.list_categoriy-parts-three {
-  display: none;
-}
-
-.parts {
+.wrapper_block-inform {
   margin-top: 21px;
 }
 
-.parts_title {
+.block_inform_parts-title {
   text-align: center;
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
   color: #fff;
+  margin-bottom: 22px;
 }
 
-.parts_text {
+.block_inform_parts-text {
+  display: block;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  text-align: center;
   color: #fff;
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 }
 
-.parts_text-two {
+.block_inform_parts-text-two {
   display: none;
 }
 
-.btn_parts {
-  text-transform: uppercase;
-  color: #fff;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.block_inform_parts-btn {
   width: 100%;
+  padding: 10px;
+  background: #c00000;
   border-radius: 5px;
   border: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.block_inform_parts-btn-two {
+  display: none;
+  width: 100%;
+  padding: 10px;
   background: #c00000;
-  margin-bottom: 21px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.btn_parts:hover {
-  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
-}
-
-.btn_parts-js-btn {
+.hr_parts {
   display: none;
 }
 
-.wrapper_list_categoriy {
+.list_categoriys {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.list_categoriy-parts-one {
+.item_categoriys {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 17px;
+  color: #fff;
+  padding: 10px;
+  background: #3b3b3b;
+  border-radius: 20px;
+  margin-bottom: 10px;
   width: 49%;
 }
 
-.list_categoriy-parts-two {
-  width: 50%;
-}
-
-.item_categoriy_part-one {
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 14px;
-  color: #fff;
-  padding: 16px;
-  border-radius: 15px;
-  background: #373737;
-  margin-bottom: 8px;
-}
-
-.item_categoriy_part-one:hover {
-  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
-}
-
-.item_categoriy_part-two {
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 14px;
-  color: #fff;
-  padding: 16px;
-  border-radius: 15px;
-  background: #373737;
-  margin-bottom: 8px;
-}
-
-.item_categoriy_part-two:hover {
-  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
-}
-
-.parts-hr-one {
-  display: none;
-}
-
-.parts-hr-two {
-  display: none;
+.item_categoriys:hover {
+  background: #c00000;
 }
 
 /* Футер */
@@ -591,12 +491,6 @@ body {
     width: 10%;
   }
 
-  /* Список запчастин */
-
-  .card {
-    width: calc(50% - 10px); /* Для 2 колонок на середніх екранах */
-  }
-
   /* Добавляємо та стилізуємо назву організації при розмірі більше 768px */
 
   .block_logo-name {
@@ -638,62 +532,51 @@ body {
     display: none;
   }
 
-  /* Блок запчастини */
+  /* Блок Запчастин при розмірі в 768px */
 
-  .parts_title {
+  .block_inform_parts-title {
     text-align: start;
     font-size: 24px;
   }
 
-  .parts_text {
+  .block_inform_parts-text {
     display: none;
   }
 
-  .parts_text-two {
+  .block_inform_parts-text-two {
     display: block;
     font-weight: 400;
     font-size: 16px;
-    line-height: 17px;
-    text-align: start;
+    line-height: 20px;
     color: #fff;
-    margin-top: 21px;
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 
-  .btn_parts {
-    width: 45%;
+  .block_inform_parts-btn {
+    width: 50%;
+    padding: 20px;
+    font-size: 18px;
   }
 
-  .list_categoriy-parts-one {
-    width: 40%;
+  .wrapper_list-categoriys {
+    position: relative;
+    margin-top: 45px;
   }
 
-  .list_categoriy-parts-two {
-    width: 40%;
-  }
-
-  .item_categoriy_part-one {
-    font-size: 20px;
-    padding: 30px;
-  }
-
-  .item_categoriy_part-two {
-    font-size: 20px;
-    padding: 30px;
-  }
-
-  .item_categoriy_part-one:hover {
-    background: #c00000;
-  }
-
-  .item_categoriy_part-two:hover {
-    background: #c00000;
-  }
-
-  .parts-hr-one {
-    margin-top: 16px;
+  .hr_parts.hr_parts-one {
+    position: absolute;
+    top: 0;
+    left: 50%;
     display: block;
-    height: 480px;
+    height: 430px;
+    border: 2px solid #ffffff;
+  }
+
+  .item_categoriys {
+    width: 45%;
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
   }
 
   /* Футер */
@@ -792,12 +675,6 @@ body {
     top: 5%;
   }
 
-  /* Блок із запчастинами  */
-
-  .card {
-    width: calc(33.33% - 10px); /* Для 3 колонок на більших екранах */
-  }
-
   /*Стилізуємо риску біля логотипа при розмірі 1024px*/
 
   .header_block-logo {
@@ -882,115 +759,49 @@ body {
     bottom: 500px;
   }
 
-  /* Запчастини */
+  /* Блок запчастини при розмірі 1024px */
 
-  .wrapper_list_categoriy {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .list_categoriy-parts-one {
-    width: 25%;
-  }
-
-  .list_categoriy-parts-two {
-    width: 25%;
-  }
-
-  .list_categoriy-parts-three {
-    width: 25%;
-    display: block;
-  }
-
-  .item_categoriy_part-one {
-    font-size: 17px;
-  }
-
-  .item_categoriy_part-two {
-    font-size: 17px;
-  }
-
-  .item_categoriy_part {
-    display: block;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 14px;
-    color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    background: #373737;
-    margin-bottom: 8px;
-  }
-
-  .item_categoriy_part:hover {
-    background: #c00000;
-    box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
-  }
-
-  .item_categoriy_part-one:hover {
-    box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
-  }
-
-  .parts-hr-one {
-    margin-left: 0;
-    margin-right: 0;
-    height: 315px;
-  }
-
-  .parts-hr-two {
-    display: block;
-    height: 315px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 16px;
-  }
-
-  .parts_title {
+  .block_inform_parts-title {
     font-size: 32px;
   }
 
-  .parts_text-two {
+  .block_inform_parts-text-two {
     font-size: 20px;
-    line-height: 27px;
+    line-height: 25px;
   }
 
-  .btn_parts {
+  .block_inform_parts-btn {
     display: none;
   }
 
-  .btn_parts-js-btn {
-    text-transform: uppercase;
-    color: #fff;
-    padding: 15px;
+  .item_categoriys {
+    width: 30%;
+    font-size: 21px;
+  }
+
+  .hr_parts.hr_parts-one {
+    left: 32%;
+    height: 275px;
+    font-size: 24px;
+  }
+
+  .hr_parts.hr_parts-two {
+    position: absolute;
+    top: 0;
+    left: 67%;
+    display: block;
+    height: 275px;
+    border: 2px solid #fff;
+  }
+
+  .block_inform_parts-btn-two {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 33%;
-    border-radius: 5px;
-    border: none;
-    background: #c00000;
-    margin-bottom: 21px;
-    margin-left: 34%;
-  }
-
-  .btn_parts-js-btn:hover {
-    box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
-  }
-
-  .item_categoriy_part-one:nth-child(1) {
-    display: none;
-  }
-
-  .item_categoriy_part-one:nth-child(6) {
-    display: none;
-  }
-
-  .item_categoriy_part-two:nth-child(1) {
-    display: none;
-  }
-
-  .item_categoriy_part-two:nth-child(2) {
-    display: none;
+    margin: 0 auto;
+    width: 35%;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
   }
 
   /* Футер */
