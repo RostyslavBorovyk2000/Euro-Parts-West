@@ -1,0 +1,73 @@
+/* Вказуємо тип моделі боксу (box sizing). */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Прибираємо внутрішні відступи. */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Прибираємо зовнішні відступи.*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Встановлюємо основні налаштування за замовчуванням для елемента <body> */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Видаляємо стандартну стилізацію для всіх елементів <ul> та <li>, у яких є атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Елементи <a>, які не мають класу, скидаємо до типових стилів за замовчуванням. */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a{
+    color: #ffff;
+    text-decoration: none;
+}
+
+/* Полегшуємо роботу із зображеннями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Вказуємо зрозумілу частоту оновлення даних у статті.*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Успадковуємо шрифти для полів введення і кнопок. */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}

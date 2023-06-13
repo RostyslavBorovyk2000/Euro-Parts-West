@@ -1,0 +1,1682 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #1d1d1c;
+  cursor: pointer;
+}
+
+.container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-up {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  left: 6%;
+  top: 8%;
+  background: #373737;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.close-img {
+  position: relative;
+  top: 15px;
+  left: 83%;
+  width: 15%;
+}
+
+.sing_up-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 29px;
+  color: #ffffff;
+  margin-top: 18px;
+}
+
+.sing_up-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.sing_up_input_name {
+  padding: 10px;
+  width: 100%;
+  color: #ffffff;
+  background: #3b3b3b;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.sing_up_input_phone {
+  padding: 10px;
+  width: 100%;
+  color: #ffffff;
+  background: #3b3b3b;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.sing_up_input_inform {
+  padding-left: 10px;
+  width: 100%;
+  height: 110px;
+  color: #ffffff;
+  background: #3b3b3b;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 9px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.wrapper-send {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #c00000;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.send-link-btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-right: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.send-link-img {
+  width: 25px;
+  margin-left: 5px;
+}
+
+.accept-sign-up {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  left: 6%;
+  top: 8%;
+  background: #373737;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.accept-sing_up-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 34px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.accept-sing_up-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.img-sing-up {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.accept-close-img {
+  position: relative;
+  top: 15px;
+  left: 83%;
+  width: 15%;
+}
+
+/* Хедер  */
+
+.header {
+  background: linear-gradient(
+      90.4deg,
+      rgba(29, 29, 28, 0.82) 9.44%,
+      rgba(29, 29, 28, 0) 90.47%
+    ),
+    linear-gradient(
+      90.4deg,
+      rgba(29, 29, 28, 0.82) 9.44%,
+      rgba(29, 29, 28, 0) 90.47%
+    );
+}
+
+.header_block-hr {
+  position: relative;
+  top: 60px;
+  display: none;
+  height: 100%;
+  border: 1px solid #3b3b3b;
+}
+
+/* Задаємо стилі верхньому блоку із Логотипом */
+
+.header_wrapper {
+  background: radial-gradient(
+    264.15% 3352.09% at 66.53% -132.26%,
+    #1d1d1c 0%,
+    rgba(54, 54, 53, 0.094775) 69.99%,
+    rgba(29, 29, 28, 0.1) 100%
+  );
+}
+
+.header_block-logo {
+  padding-top: 23px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+/* Створюємо меню бургер яке є випадаючим */
+
+.wrapper_checkbox {
+  display: none;
+}
+
+.wrapper_button-line:nth-child(1).js-active {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.wrapper_button-line:nth-child(2).js-active {
+  opacity: 0;
+}
+
+.wrapper_button-line:nth-child(3).js-active {
+  transform: rotate(-45deg);
+  top: -10px;
+}
+
+.wrapper_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.wrapper_button-line {
+  display: block;
+  width: 20px;
+  height: 3px;
+  border-radius: 5px;
+  background: #fff;
+  margin: 3px 0;
+  position: relative;
+  transition: all 0.1s linear 0.2s;
+  cursor: pointer;
+}
+
+.wrapper_menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+  height: 55%;
+  background: #1d1d1c;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 100px 0 35px;
+  transition: right 0.4s;
+  border-bottom-left-radius: 30px;
+  z-index: 1;
+}
+
+.wrapper_menu.js-active {
+  display: flex;
+}
+
+.wrapper_menu-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+  transition: all 0.2s linear;
+}
+
+.wrapper_menu-link:hover {
+  padding-left: 5px;
+}
+
+/* Стілизіуєме блок із фото та текстом */
+
+.image-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90.4deg,
+    rgba(29, 29, 28, 0.82) 9.44%,
+    rgba(29, 29, 28, 0) 90.47%
+  );
+}
+
+.block_inform-positions {
+  position: absolute;
+  top: 15%;
+}
+
+.header_block_inform-tittle {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  color: #ffffff;
+  width: 310px;
+  text-transform: uppercase;
+}
+
+.header_block_inform-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-top: 5px;
+  width: 310px;
+}
+
+.header_block_inform-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #c00000;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.header_block_inform-btn:hover {
+  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+}
+
+/* Ховаємо список телефонів, назву фірми та блок із меню при розмірі у 320px */
+
+.name-organization {
+  display: none;
+}
+
+.header_block-phone {
+  display: none;
+}
+
+.header-block-menu {
+  display: none;
+}
+
+/* Секція програми лоялності */
+
+.loyalty_program-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.program_list-item {
+  z-index: 1;
+  width: 50%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #ffffff;
+  text-align: center;
+  margin: 18px 0;
+}
+
+.img-loyalty {
+  margin: 5px auto;
+}
+
+/* Блок із сервісом */
+
+.service_block-inform {
+  margin-top: 40px;
+}
+
+.service_inform-tittle {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.service_inform-text-one {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.service_block-btn {
+  display: none;
+}
+
+.service_inform-text-two {
+  display: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.js_service_text-two {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.service_block-slider {
+  position: relative;
+  display: flex;
+}
+
+.service_slider-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.service_slider-arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  background: #737373;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.service_slider-arrow-right {
+  position: absolute;
+  top: 50%;
+  left: 86%;
+  background: #737373;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.js-service_block-btn {
+  display: flex;
+  justify-content: center;
+  background: #c00000;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.js-service_block-btn:hover {
+  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+}
+
+.wrapper_service-gallery-img {
+  display: none;
+}
+
+.service_inform-text_bottom {
+  display: none;
+}
+
+/* Блок реставрації */
+
+.restoration {
+  display: flex;
+  background: #3b3b3b;
+  margin-top: 155px;
+  height: 350px;
+}
+
+.wrapper-restoration {
+  position: relative;
+  bottom: 100px;
+}
+
+.restoration-main_img {
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.restoration-inform_tittle {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 120%;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.restoration-list_item {
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.restoration-list_img {
+  margin-right: 4px;
+}
+
+.restoration-btn {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 15px;
+  background: #c00000;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.restoration-btn:hover {
+  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+}
+
+/* Стилізуємо блок із запчастинами */
+
+.right-image.img-map-none {
+  display: none;
+}
+
+.wrapper_container-min-width {
+  margin-top: 36px;
+}
+
+.parts-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.parts-text-top {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.parts-text-bottom {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.right-image {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 11px;
+}
+
+.wrapper-parts_new_mail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.mail-text {
+  margin-left: 12px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 133%;
+  color: #ffffff;
+}
+
+.parts-btn {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 15px;
+  background: #c00000;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Блок про нас */
+
+.about-us {
+  margin-top: 31px;
+}
+
+.about-us_title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.about-us_text_one {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.about-us_text_two {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+
+.about-us_text_three {
+  display: none;
+}
+
+.about-us_text_four {
+  display: none;
+}
+
+.about-us_block_img {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.about-us_img {
+  width: 45%;
+  border-radius: 20px;
+}
+
+.about-us_block_-slider-img {
+  display: none;
+}
+
+/* Блок із контактами */
+
+.contact {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.wrapper-contact {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper_contact-inform {
+  margin-bottom: 30px;
+}
+
+.contact_inform-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.block_inform-clock-work {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.clock-work_text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.contact_inform-location {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.inform_location-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.contact_inform-phone {
+  display: flex;
+}
+
+.wrapper_block-phone {
+  width: 290px;
+  margin-bottom: 20px;
+}
+
+.contact-phone {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  margin-left: 10px;
+}
+
+.contact_inform-mail {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact_inform_link-mail {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.contact_inform-pay {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact_inform-pay_text {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.contact_inform-map {
+  border-radius: 20px;
+  width: 100%;
+}
+
+/* Футер */
+
+.footer {
+  background: radial-gradient(
+    72.16% 72.16% at 49.31% 46.75%,
+    #3b3b3b 30.78%,
+    rgba(59, 59, 59, 0) 100%
+  );
+}
+
+.wrapper_footer-map {
+  display: none;
+}
+
+.wrapper_footer-inform {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper_footer-contact {
+  margin-top: 22px;
+}
+
+.footer_logo-text {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.footer_name-logo {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: #ffffff;
+  margin-left: 5px;
+}
+
+.footer_item-contact {
+  margin-bottom: 15px;
+}
+
+.footer-work_text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+.footer_phone-img {
+  display: none;
+}
+
+.footer_mail-img {
+  display: none;
+}
+
+.footer-phone {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+.footer-mail {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+}
+
+.footer_list_link-pages {
+  margin-top: 75px;
+}
+
+.footer_item-pages {
+  margin-bottom: 10px;
+}
+
+.footer_link-pages {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  /* Форма */
+
+  .accept-sign-up {
+    width: 60%;
+    left: 20%;
+  }
+
+  .sign-up {
+    width: 60%;
+    left: 20%;
+    top: 15%;
+  }
+
+  .close-img {
+    position: relative;
+    top: 15px;
+    left: 90%;
+    width: 10%;
+  }
+
+  .accept-close-img {
+    position: relative;
+    top: 15px;
+    left: 90%;
+    width: 10%;
+  }
+
+  /* Добавляємо та стилізуємо назву організації при розмірі більше 768px */
+
+  .block_logo-name {
+    display: flex;
+  }
+
+  .name-organization {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-top: 3px;
+    margin-left: 5px;
+  }
+
+  /* Показуємо першив телефон при розмірі більше ніч 768px */
+
+  .header_block-phone {
+    position: relative;
+    display: flex;
+    top: -20px;
+    left: 15%;
+  }
+
+  .header_phone-link {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    color: #c00000;
+    margin-left: 5px;
+  }
+
+  .header_phone-item:nth-child(3) {
+    display: none;
+  }
+
+  .header_phone-item:nth-child(4) {
+    display: none;
+  }
+
+  /*  Стилізуємо блок фото із текстом для розміру 768px  */
+
+  .background {
+    height: 104.5%;
+  }
+
+  .block_inform-positions {
+    position: absolute;
+    top: 40%;
+  }
+
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 50px 50px;
+  }
+
+  .header_block_inform-tittle {
+    font-size: 40px;
+    line-height: 49px;
+    width: 485px;
+  }
+
+  .header_block_inform-text {
+    font-size: 20px;
+    line-height: 24px;
+    width: 485px;
+    padding-top: 5px;
+  }
+
+  .header_block_inform-btn {
+    width: 312px;
+    margin-top: 30px;
+  }
+
+  .block_inform-circle {
+    position: relative;
+    display: flex;
+    left: 90%;
+    bottom: 340px;
+    margin: 20px;
+    width: 25px;
+    height: 25px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .block_inform-circle.js-active {
+    background: #c00000;
+  }
+
+  /* Секція програми лоялності розмір більше ніж 768px */
+
+  .loyalty_program-list {
+    display: flex;
+    flex-wrap: nowrap;
+    background: #3b3b3b;
+    border-radius: 20px;
+  }
+
+  /* Стилізація блока сервіс при розмірі в 768px */
+
+  .js_service_text-two {
+    display: none;
+  }
+
+  .js-service_block-btn {
+    display: none;
+  }
+
+  .wrapper_service_block-text {
+    background: #3b3b3b;
+    border-radius: 20px;
+    padding: 1px;
+    margin-bottom: 30px;
+  }
+
+  .service_inform-tittle {
+    text-align: start;
+    padding: 26px 0 22px 16px;
+  }
+
+  .service_inform-text-one {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 133%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 16px;
+  }
+
+  .service_inform-text-two {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 133%;
+    margin: 0 0 22px 16px;
+  }
+
+  .service_inform-text-two {
+    display: block;
+  }
+
+  .service_block-btn {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    background: #c00000;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-left: 16px;
+  }
+
+  .service_block-btn:hover {
+    box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+  }
+
+  .service_slider-arrow-left {
+    padding: 15px;
+  }
+
+  .service_slider-arrow-right {
+    padding: 15px;
+    left: 92%;
+  }
+
+  /*    Блок ревставрації */
+
+  .restoration {
+    margin-top: 55px;
+    height: 200px;
+  }
+
+  .wrapper-restoration {
+    display: flex;
+    bottom: 0;
+  }
+
+  .restoration-main_img {
+    position: relative;
+    bottom: 30px;
+    right: 70px;
+    width: 260px;
+  }
+
+  .restoration-btn {
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .wrapper_restoration-inform {
+    margin-top: 15px;
+  }
+
+  /* Стилізуємо блок із запчастинами */
+
+  .wrapper_container-min-width {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+  }
+
+  .left-block {
+    position: relative;
+    border-radius: 20px;
+    background-color: #3b3b3b;
+    flex-grow: 1;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .parts-title {
+    text-align: start;
+    font-size: 24px;
+  }
+
+  .parts-text-top {
+    font-size: 16px;
+    width: 80%;
+  }
+
+  .parts-text-bottom {
+    font-size: 16px;
+    width: 75%;
+  }
+
+  .right-image {
+    flex-shrink: 0;
+    margin-left: 25px;
+  }
+
+  .parts_map-img {
+    position: absolute;
+    left: 75%;
+    width: 100%;
+    top: 15%;
+    height: auto;
+  }
+
+  .mail-text {
+    font-size: 16px;
+    width: 55%;
+  }
+
+  .wrapper-parts_new_mail {
+    justify-content: start;
+  }
+
+  .parts-btn {
+    width: 60%;
+  }
+  .parts-btn:hover {
+    box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+  }
+
+  /* Блок про нас */
+
+  .about-us {
+    margin-top: 7%;
+  }
+
+  .about-us_block_img {
+    display: none;
+  }
+
+  .about-us_block_text {
+    background: #3b3b3b;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 40px;
+  }
+
+  .about-us_title {
+    text-align: start;
+    font-size: 24px;
+  }
+
+  .about-us_text_one {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .about-us_text_two {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .about-us_text_three {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 133%;
+    color: #ffffff;
+  }
+
+  .about-us_text_four {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 133%;
+    color: #ffffff;
+  }
+
+  .about-us_block_-slider-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+  }
+
+  .about_us-list {
+    list-style: none;
+  }
+
+  .about_us-item {
+    margin-bottom: 31px;
+  }
+
+  .about_us-slider-img {
+    border-radius: 25px;
+  }
+
+  .arrow_top_btn-top {
+    position: absolute;
+    top: 10px;
+    left: 45%;
+    padding: 15px;
+    background: #737373;
+    border-radius: 7px;
+  }
+
+  .arrow_top_btn-bottom {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    padding: 15px;
+    background: #737373;
+    border-radius: 7px;
+  }
+
+  /*  Блок із контактами  */
+
+  .wrapper-flex-contact {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .wrapper-contact {
+    background: #3b3b3b;
+    border-radius: 20px;
+    width: 55%;
+    padding: 7px;
+    display: block;
+  }
+
+  .wrapper_contact-inform {
+    margin-top: 70px;
+    margin-left: 40px;
+  }
+
+  .wrapper_contact-map {
+    width: 40%;
+  }
+
+  .contact_inform-title {
+    text-align: start;
+    font-size: 24px;
+  }
+
+  .clock-work_text {
+    font-size: 16px;
+  }
+
+  .inform_location-text {
+    font-size: 16px;
+  }
+
+  .contact_inform_link-mail {
+    font-size: 16px;
+  }
+
+  .contact_inform-pay_text {
+    font-size: 16px;
+  }
+
+  /* Футер */
+
+  .footer_logo-text {
+    align-items: center;
+  }
+
+  .footer_list_link-pages {
+    display: none;
+  }
+
+  .wrapper_footer-contact {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer_phone-img {
+    display: block;
+  }
+
+  .footer_mail-img {
+    display: block;
+  }
+
+  .footer_item-contact {
+    display: flex;
+    margin-right: 5px;
+  }
+
+  .wrapper_footer-inform {
+    display: block;
+  }
+
+  .footer_name-logo {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .footer-work_text {
+    font-size: 14px;
+  }
+
+  .footer-phone {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  .footer-mail {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Форма */
+
+  .close-img {
+    top: 25px;
+    left: 88%;
+  }
+
+  .sing_up-title {
+    font-size: 20px;
+  }
+
+  .sing_up-text {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .sing_up_input_name {
+    padding: 20px;
+  }
+
+  .sing_up_input_phone {
+    padding: 20px;
+  }
+
+  .wrapper-send {
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  .accept-sign-up {
+    width: 45%;
+    left: 30%;
+    top: 20%;
+  }
+
+  .sign-up {
+    width: 45%;
+    left: 30%;
+    top: 20%;
+  }
+
+  /* Змінюємо фон */
+
+  .header_wrapper {
+    background: linear-gradient(
+      265.66deg,
+      #1d1d1c 48.98%,
+      rgba(29, 29, 28, 0) 68.6%
+    );
+  }
+
+  /*Стилізуємо риску біля логотипа при розмірі 1024px*/
+
+  .header_block-logo {
+    padding-bottom: 0;
+  }
+
+  .logo_block-hr {
+    position: relative;
+    display: flex;
+    border: 1px solid #3b3b3b;
+    height: 61px;
+    bottom: 25px;
+    left: 10px;
+  }
+
+  /* Ховаємо бургер меню при розмірі більше ніж 1024px */
+
+  .wrapper-dropdown {
+    display: none;
+  }
+
+  /*  Добавляємо останій телефон */
+
+  .header_block-phone {
+    left: 0;
+  }
+
+  .header_phone-item:nth-child(3) {
+    margin-left: 10px;
+    display: block;
+  }
+
+  .header_phone-item:nth-child(4) {
+    display: block;
+  }
+
+  .header_block-hr {
+    position: relative;
+    top: 60px;
+    display: flex;
+    height: 100%;
+    border: 1px solid #3b3b3b;
+  }
+
+  /* Добавляємо меню та стилізуємо його при розмірі 1024px */
+
+  .header-block-menu {
+    display: block;
+  }
+
+  .header_menu-list {
+    display: flex;
+    justify-content: end;
+  }
+
+  .header_menu-item {
+    margin-left: 5%;
+    margin-bottom: 2%;
+  }
+
+  .header_menu-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+
+  .header_menu-link:hover {
+    color: #c00000;
+  }
+
+  .block_inform-positions {
+    position: absolute;
+    top: 80%;
+  }
+
+  .block_inform-circle {
+    margin-bottom: 1%;
+  }
+
+  .block_inform-circle {
+    bottom: 500px;
+  }
+
+  /*   Стилізуємо блок сервіс при розмірі в 1024 px */
+
+  .service_block-slider {
+    display: none;
+  }
+
+  .wrapper_service_block-text {
+    width: 60%;
+  }
+
+  .service_inform-tittle {
+    font-size: 32px;
+    line-height: 120%;
+  }
+
+  .service_inform-text-one {
+    font-size: 17px;
+    line-height: 133%;
+  }
+
+  .service_inform-text-two {
+    font-size: 17px;
+    line-height: 133%;
+  }
+
+  .service_block-btn {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .wrapper_service-gallery-img {
+    position: relative;
+    left: 40%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 60%;
+    top: -100px;
+  }
+
+  .service-gallery_img-one {
+    grid-column: 1 / 2;
+    margin-top: 110%;
+    border-radius: 20px;
+  }
+
+  .wrapper_service_colum-one {
+    grid-column: 2 / 3;
+  }
+
+  .wrapper_service_colum-two {
+    grid-column: 3 / 4;
+  }
+
+  .service-gallery_img-six {
+    grid-column: 4 / 5;
+    margin-top: 80%;
+  }
+
+  .service_colum-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .service-gallery_img-six {
+    border-radius: 20px;
+  }
+
+  .colum_one-img {
+    border-radius: 20px;
+    grid-column: 1 / 3;
+  }
+
+  .colum_two-img {
+    border-radius: 20px;
+    grid-column: 1 / 3;
+  }
+
+  .colum-one-item-one {
+    margin-top: 65%;
+  }
+
+  .service_inform-text_bottom {
+    display: block;
+    position: relative;
+    top: -100px;
+    left: 70%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 133%;
+    color: #fff;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: #3b3b3b;
+    width: 30%;
+  }
+
+  /* Стилі для блоку реставрації при розмірі в 1024px */
+
+  .restoration-main_img {
+    width: 315px;
+  }
+
+  .wrapper-restoration {
+    position: relative;
+    right: 80px;
+    margin-top: 50px;
+  }
+
+  .restoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    height: 255px;
+  }
+
+  .wrapper_restoration-inform {
+    margin-top: 15px;
+  }
+
+  .restoration-inform_tittle {
+    font-size: 32px;
+  }
+
+  .restoration-list_item {
+    font-size: 20px;
+  }
+
+  /*  Стилі для блоку запчастин при розмірі в 1024px  */
+
+  .parts {
+    margin-top: 100px;
+  }
+
+  .parts-title {
+    font-size: 32px;
+  }
+
+  .parts-text-top {
+    font-size: 20px;
+  }
+
+  .parts-text-bottom {
+    font-size: 20px;
+  }
+  .mail-text {
+    font-size: 20px;
+  }
+
+  /*   Стилі для блоку про нас */
+
+  .wrapper-about-us-inform {
+    position: relative;
+    top: 160px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-us_block_text {
+    width: 45%;
+  }
+
+  .about-us_block_-slider-img {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  /*   Блок контакти  */
+
+  .contact {
+    margin-top: 15%;
+  }
+
+  .wrapper_contact-map {
+    width: 40%;
+  }
+
+  .wrapper-contact {
+    width: 55%;
+  }
+
+  .contact_inform-title {
+    font-size: 32px;
+  }
+
+  .clock-work_text {
+    font-size: 20px;
+  }
+
+  .inform_location-text {
+    font-size: 20px;
+  }
+
+  .contact_inform_link-mail {
+    font-size: 20px;
+  }
+
+  .contact_inform-pay_text {
+    font-size: 20px;
+  }
+
+  /* Футер */
+
+  .footer-work_text {
+    font-size: 16px;
+  }
+
+  .footer-phone {
+    font-size: 16px;
+  }
+
+  .footer-mail {
+    font-size: 16px;
+  }
+
+  .wrapper_footer-map {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .footer_inform-map {
+    width: 100%;
+    height: 85%;
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../page-parts/parts-css/parts.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
+      rel="stylesheet" />
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="../page-parts/pars-js/parts.js" defer></script>
+    <title>ЄВРО ПАРТС ЗАХІД</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_wrapper">
+        <span class="header_block-hr"></span>
+        <div class="container">
+          <div class="header_block-logo">
+            <div class="block_logo-name">
+              <img src="../images/header/logo.svg" width="70" height="23" />
+              <h3 class="name-organization">ЄВРО ПАРТС ЗАХІД</h3>
+              <span class="logo_block-hr"></span>
+            </div>
+
+            <ul class="header_block-phone">
+              <li class="header_phone-item">
+                <img
+                  src="../images/header/phone.svg"
+                  alt="phone"
+                  width="18"
+                  height="18" />
+              </li>
+              <li class="header_phone-item">
+                <a class="header_phone-link" href="tel:+380672808384"
+                  >+38 (067) 280 83 84</a
+                >
+              </li>
+              <li class="header_phone-item">
+                <img
+                  src="../images/header/phone.svg"
+                  alt="phone"
+                  width="18"
+                  height="18" />
+              </li>
+              <li class="header_phone-item">
+                <a class="header_phone-link" href="tel:+380969934591"
+                  >+38 (096) 993 45 91</a
+                >
+              </li>
+            </ul>
+
+            <div class="wrapper-dropdown">
+              <input type="checkbox" id="checkbox" class="wrapper_checkbox" />
+
+              <label for="checkbox" class="wrapper_button">
+                <span class="wrapper_button-line"></span>
+                <span class="wrapper_button-line"></span>
+                <span class="wrapper_button-line"></span>
+              </label>
+
+              <div class="wrapper_menu">
+                <a href="../main.html" class="wrapper_menu-link">ГОЛОВНА</a>
+                <a href="./parts.html" class="wrapper_menu-link"
+                  >КАТАЛОГ ТОВАРІВ</a
+                >
+                <a href="../page-sirvice/service.html" class="wrapper_menu-link"
+                  >СЕРВІС</a
+                >
+                <a href="../page-restoration/" class="wrapper_menu-link"
+                  >РЕСТАВРАЦІЯ</a
+                >
+                <a href="../page-contact/" class="wrapper_menu-link"
+                  >КОНТАКТИ</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="header-block-menu">
+            <ul class="header_menu-list">
+              <li class="header_menu-item">
+                <a class="header_menu-link" href="../main.html">ГОЛОВНА</a>
+              </li>
+              <li class="header_menu-item">
+                <a class="header_menu-link" href="./parts.html"
+                  >КАТАЛОГ ТОВАРІВ</a
+                >
+              </li>
+              <li class="header_menu-item">
+                <a class="header_menu-link" href="../page-sirvice/service.html"
+                  >СЕРВІС</a
+                >
+              </li>
+              <li class="header_menu-item">
+                <a
+                  class="header_menu-link"
+                  href="../page-restoration/restoration.html"
+                  >РЕСТАВРАЦІЯ</a
+                >
+              </li>
+              <li class="header_menu-item">
+                <a class="header_menu-link" href="../page-contact/contact.html"
+                  >КОНТАКТИ</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="parts">
+        <div class="container">
+          <div class="block">
+            <h2 class="parts-block-name"></h2>
+            <input class="input-surch" type="text" placeholder="Пошук">
+            </div>
+        <div class="cards">
+          <!-- <div class="card">
+            <img src="${this.img}" alt="Запчастина">
+            <h3 class="name-part">${this.name}</h3>
+            <p class="number-part">${this.number}</p>
+            <button class="btn-card">Замовити</button>
+          </div>       -->
+        </div>
+          
+            <div class="wrapper_parts">
+
+                <div class="parts_inform">
+                    <h3 class="parts_title">Запчастини</h3>
+                    <p class="parts_text">Наші кваліфіковані менеджери завжди готові порадити та допомогти клієнтам у виборі необхідних запчастин. </p>
+                    <p class="parts_text-two">Наші кваліфіковані менеджери завжди готові порадити та допомогти клієнтам у виборі необхідних запчастин. Ми розуміємо, що кожен клієнт має свої унікальні потреби та бюджет, тому ми докладаємо максимум зусиль, щоб знайти оптимальне рішення та допомогти зекономити кошти.</p>
+
+                    <button class="btn_parts js-btn">дізнатися ціну та наявність</button>
+                </div>
+
+                <div class="wrapper_list_categoriy">
+
+                    <ul class="list_categoriy-parts-one">
+                        <li class="item_categoriy_part-one js-one">Вентелятори</li>
+                        <li class="item_categoriy_part-one js-two">Датчики</li>
+                        <li class="item_categoriy_part-one js-three">Електро прилади</li>
+                        <li class="item_categoriy_part-one js-four">Паливна система</li>
+                        <li class="item_categoriy_part-one js-five">Гідравлічна система</li>
+                        <li class="item_categoriy_part-one js-six">Пальці</li>
+                    </ul>
+    <hr class="parts-hr-one">
+                    <ul class="list_categoriy-parts-two">
+                        <li class="item_categoriy_part-two js-seven">Кондиціонери</li>
+                        <li class="item_categoriy_part-two js-eight">Навісне обладнання</li>
+                        <li class="item_categoriy_part-two js-nine">Мости</li>
+                        <li class="item_categoriy_part-two js-ten">КПП</li>
+                        <li class="item_categoriy_part-two js-eleven">Кутовий редуктор</li>
+                        <li class="item_categoriy_part-two js-twelv">Фільтра</li>
+                    </ul>
+    <hr class="parts-hr-two">
+                    <ul class="list_categoriy-parts-three">
+                        <li class="item_categoriy_part js-thirteen">Кондиціонери</li>
+                        <li class="item_categoriy_part js-fourteen">Вентелятори</li>
+                        <li class="item_categoriy_part js-fifteen">Навісне обладнання</li>
+                        <li class="item_categoriy_part js-sixteen">Пальці</li>
+                    </ul>
+    
+                </div>
+                <button class="btn_parts-js-btn">дізнатися ціну та наявність</button>
+            </div>
+        </div>
+    </section>
+    <section class="sign-up">
+        <div class="container">
+          <div class="wrapper_img-close">
+            <img class="close-img" src="../images/sing-up/close.svg" alt="close">
+          </div>
+      
+          <h3 class="sing_up-title">Запис на ремонт спецтехніки</h3>
+          <p class="sing_up-text">Наш менеджер зв’яжеться з вами та узгодить запис</p>
+      
+          <input class="sing_up_input_name" type="text" placeholder="Ваше ім’я">
+          <input class="sing_up_input_phone" type="tel" placeholder="Ваш телефон">
+          <input class="sing_up_input_inform" type="text" placeholder="Марка та модель техніки">
+      
+          <div class="wrapper-send">
+            <a class="send-link-btn">Надіслати запит</a>
+            <img class="send-link-img" src="../images/sing-up/planer.svg">
+          </div>
+      </section>
+      <section class="accept-sign-up">
+        <div class="container">
+          <div class="wrapper_img-close">
+            <img class="accept-close-img" src="../images/sing-up/close.svg" alt="close">
+          </div>
+          <h3 class="accept-sing_up-title">Ваш запит прийнято!</h3>
+          <p class="accept-sing_up-text">Наш менеджер зв’яжеться з вами в найближчий час</p>
+      
+          <div class="wrapper_img-sing-up">
+            <img class="img-sing-up" src="../images/sing-up/man.svg">
+          </div>
+        </div>
+      </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="wrapper_footer-inform">
+          <div class="wrapper_footer-contact">
+            <div class="footer_logo-text">
+              <img
+                class="footer-logo"
+                src="../images/header/logo.svg"
+                width="70"
+                height="23" />
+              <h3 class="footer_name-logo">Євро Партс Захід</h3>
+            </div>
+
+            <ul class="footer_list-contact">
+              <li class="footer_item-contact">
+                <p class="footer-work_text">м. Хмельницький</p>
+              </li>
+              <li class="footer_item-contact">
+                <p class="footer-work_text">Пн - Пт: 8:00 - 17:00</p>
+              </li>
+              <li class="footer_item-contact">
+                <p class="footer-work_text">Сб: 8:00 - 15:00</p>
+              </li>
+              <li class="footer_item-contact">
+                <img
+                  class="footer_phone-img"
+                  src="../images/contact/phone.svg"
+                  alt="phone" /><a class="footer-phone" href="tel:+380672808384"
+                  >+380 (67) 280 83 84</a
+                >
+              </li>
+              <li class="footer_item-contact">
+                <img
+                  class="footer_phone-img"
+                  src="../images/contact/phone.svg"
+                  alt="phone" /><a class="footer-phone" href="tel:+380969934591"
+                  >+380 (96) 993 45 91</a
+                >
+              </li>
+              <li class="footer_item-contact">
+                <img
+                  class="footer_mail-img"
+                  src="../images/contact/mail.svg"
+                  alt="mail" /><a
+                  class="footer-mail"
+                  href="mailto:europartswest1@gmail.com"
+                  >europartswest1@gmail.com</a
+                >
+              </li>
+            </ul>
+
+            <div class="wrapper_footer-map">
+              <iframe
+                class="footer_inform-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162.26824443719536!2d26.967763160480818!3d49.40338512278056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4732067d411f8ff3%3A0x9b2695110350dd7b!2sAvtozapchastyny%2C%20Mah.!5e0!3m2!1sru!2sua!4v1686254268805!5m2!1sru!2sua"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <ul class="footer_list_link-pages">
+            <li class="footer_item-pages">
+              <a class="footer_link-pages" href="../main.html">ГОЛОВНА</a>
+            </li>
+            <li class="footer_item-pages">
+              <a class="footer_link-pages" href="./parts.html"
+                >КАТАЛОГ ТОВАРІВ</a
+              >
+            </li>
+            <li class="footer_item-pages">
+              <a class="footer_link-pages" href="../page-sirvice/service.html"
+                >СЕРВІС</a
+              >
+            </li>
+            <li class="footer_item-pages">
+              <a
+                class="footer_link-pages"
+                href="../page-restoration/restoration.html"
+                >РЕСТАВРАЦІЯ</a
+              >
+            </li>
+            <li class="footer_item-pages">
+              <a class="footer_link-pages" href="../page-contact/contact.html"
+                >КОНТАКТИ</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
