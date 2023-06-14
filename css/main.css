@@ -282,14 +282,8 @@ body {
 
 .image-container {
   position: relative;
+  display: inline-block;
   width: 100%;
-  margin: 0 auto;
-}
-
-.image-container img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .overlay {
@@ -299,40 +293,47 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    90.4deg,
-    rgba(29, 29, 28, 0.82) 9.44%,
-    rgba(29, 29, 28, 0) 90.47%
-  );
+      90.4deg,
+      rgba(29, 29, 28, 0.82) 9.44%,
+      rgba(29, 29, 28, 0) 90.47%
+    ),
+    linear-gradient(
+      90.4deg,
+      rgba(29, 29, 28, 0.82) 9.44%,
+      rgba(29, 29, 28, 0) 90.47%
+    );
 }
 
-.block_inform-positions {
+.text-overlay {
   position: absolute;
-  top: 15%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  text-align: left;
+  color: white;
+  padding: 20px;
 }
 
 .header_block_inform-tittle {
   font-weight: 600;
-  font-size: 30px;
-  line-height: 37px;
+  font-size: 20px;
+  line-height: 24px;
   color: #ffffff;
-  width: 310px;
   text-transform: uppercase;
 }
 
 .header_block_inform-text {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 17px;
   color: #ffffff;
   margin-top: 5px;
-  width: 310px;
+  margin-bottom: 15px;
 }
 
 .header_block_inform-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+  font-size: 16px;
+  padding: 10px 20px;
   background: #c00000;
   border-radius: 5px;
   margin-top: 10px;
@@ -343,6 +344,9 @@ body {
   box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
 }
 
+.block_inform-positions {
+  display: none;
+}
 /* Ховаємо список телефонів, назву фірми та блок із меню при розмірі у 320px */
 
 .name-organization {
@@ -651,7 +655,7 @@ body {
 }
 
 .about-us_img {
-  width: 45%;
+  width: 49%;
   border-radius: 20px;
 }
 
@@ -672,7 +676,7 @@ body {
 }
 
 .wrapper_contact-inform {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .contact_inform-title {
@@ -686,7 +690,7 @@ body {
 
 .block_inform-clock-work {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .clock-work_text {
@@ -699,7 +703,7 @@ body {
 
 .contact_inform-location {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .inform_location-text {
@@ -716,7 +720,7 @@ body {
 
 .wrapper_block-phone {
   width: 290px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .contact-phone {
@@ -728,7 +732,7 @@ body {
 
 .contact_inform-mail {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .contact_inform_link-mail {
@@ -915,11 +919,6 @@ body {
     height: 104.5%;
   }
 
-  .block_inform-positions {
-    position: absolute;
-    top: 40%;
-  }
-
   .image-container img {
     display: block;
     width: 100%;
@@ -938,27 +937,30 @@ body {
     line-height: 24px;
     width: 485px;
     padding-top: 5px;
+    margin-bottom: 20px;
   }
 
-  .header_block_inform-btn {
-    width: 312px;
-    margin-top: 30px;
+  .block_inform-positions {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 90%;
+  }
+
+  .block_inform-positions {
+    position: absolute;
+    top: 40%;
   }
 
   .block_inform-circle {
-    position: relative;
-    display: flex;
-    left: 90%;
-    bottom: 340px;
-    margin: 20px;
-    width: 25px;
-    height: 25px;
-    border: 3px solid #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    background: #737373;
+    border-radius: 7px;
+    opacity: 0.8;
+    margin-bottom: 20%;
   }
 
-  .block_inform-circle.js-active {
+  .block_inform-circle:hover {
     background: #c00000;
   }
 
@@ -1226,18 +1228,18 @@ body {
   .wrapper-contact {
     background: #3b3b3b;
     border-radius: 20px;
-    width: 55%;
+    width: 48%;
     padding: 7px;
     display: block;
   }
 
   .wrapper_contact-inform {
-    margin-top: 70px;
-    margin-left: 40px;
+    margin-top: 40px;
+    margin-left: 10px;
   }
 
   .wrapper_contact-map {
-    width: 40%;
+    width: 48%;
   }
 
   .contact_inform-title {
@@ -1440,15 +1442,7 @@ body {
 
   .block_inform-positions {
     position: absolute;
-    top: 80%;
-  }
-
-  .block_inform-circle {
-    margin-bottom: 1%;
-  }
-
-  .block_inform-circle {
-    bottom: 500px;
+    top: 70%;
   }
 
   /*   Стилізуємо блок сервіс при розмірі в 1024 px */
@@ -1613,7 +1607,7 @@ body {
   }
 
   .about-us_block_text {
-    width: 45%;
+    width: 49%;
   }
 
   .about-us_block_-slider-img {
@@ -1628,11 +1622,11 @@ body {
   }
 
   .wrapper_contact-map {
-    width: 40%;
+    width: 48%;
   }
 
   .wrapper-contact {
-    width: 55%;
+    width: 48%;
   }
 
   .contact_inform-title {
