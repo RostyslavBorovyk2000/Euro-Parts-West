@@ -575,19 +575,18 @@ body {
   }
 
   .service_list_сategories-repairs-one {
-    width: 45%;
+    width: 49%;
   }
 
   .service_list_сategories-repairs-two {
     display: block;
-    width: 45%;
+    width: 49%;
   }
 
   .wrapper_list-service-categories {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
-    right: 40px;
   }
 
   .service_item-categories_one {
@@ -788,6 +787,24 @@ body {
 
   /* Сервіс при розмірі в 1024px */
 
+  .wrapper_list-service-categories {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .service_list_сategories-repairs-one,
+  .service_list_сategories-repairs-two {
+    width: 49%;
+  }
+
+  .hr_service-block {
+    position: relative;
+    top: 20px;
+    height: 425px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+  }
+
   .service_title {
     font-size: 32px;
   }
@@ -805,28 +822,14 @@ body {
     line-height: 25px;
   }
 
+  .service_item-categories_one,
+  .service_item-categories_two {
+    font-size: 23px;
+    padding: 30px;
+  }
+
   .record-service {
     display: none;
-  }
-
-  .service_item-categories_one {
-    font-size: 28px;
-    padding: 30px;
-  }
-
-  .service_item-categories_two {
-    font-size: 28px;
-    padding: 30px;
-  }
-
-  .hr_service-block {
-    display: block;
-    position: absolute;
-    top: 240px;
-    width: 450px;
-    height: 0%;
-    border: 2px solid #ffffff;
-    transform: rotate(90.25deg);
   }
 
   .service_buttom-width {

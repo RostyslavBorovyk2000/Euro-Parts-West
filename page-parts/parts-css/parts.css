@@ -633,6 +633,7 @@ body {
   .wrapper_list-categoriys {
     position: relative;
     margin-top: 45px;
+    margin-bottom: 30px;
   }
 
   .hr_parts {
@@ -859,7 +860,7 @@ body {
   .block_inform_parts-btn-two {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 60px auto;
     width: 40%;
     padding: 30px;
     font-size: 18px;

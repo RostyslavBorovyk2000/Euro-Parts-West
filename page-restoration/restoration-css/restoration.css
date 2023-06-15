@@ -781,7 +781,8 @@ body {
   .wrapper_restoration-list {
     display: flex;
     justify-content: space-between;
-    margin: 100px 0;
+    margin-top: 45px;
+    margin-bottom: 20px;
   }
 
   .restoration_list_of_processes {
