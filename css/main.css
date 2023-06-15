@@ -287,6 +287,11 @@ body {
   width: 100%;
 }
 
+.block_inform-images {
+  width: 100%;
+  min-height: 200px;
+}
+
 .overlay {
   position: absolute;
   top: 0;
