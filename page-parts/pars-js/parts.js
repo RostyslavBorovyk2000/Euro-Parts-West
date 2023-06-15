@@ -62,16 +62,17 @@ class Categories {
   render() {
     list.insertAdjacentHTML(
       "beforeend",
-      ` <li class="item_categoriys">Двигун</li>
-    <li class="item_categoriys">КПП</li>
-    <li class="item_categoriys">Кутовий редуктор</li>
-    <li class="item_categoriys">Мости</li>
-    <li class="item_categoriys">Стріла</li>
-    <li class="item_categoriys">Електросистема</li>
-    <li class="item_categoriys">Паливна система</li>
-    <li class="item_categoriys">Гідравлічна система</li>
-    <li class="item_categoriys">Запчастини для ТО</li>
-    <li class="item_categoriys">Інші запчастини</li> `
+      `
+      <a class="item_categoriys" href="#"><div>Двигун</div></a>
+      <a class="item_categoriys" href="#"><div>КПП</div></a>
+      <a class="item_categoriys" href="#"><div>Кутовий редуктор</div></a>
+      <a class="item_categoriys" href="#"><div>Мости</div></a>
+      <a class="item_categoriys" href="#"><div>Стріла</div></a>
+      <a class="item_categoriys" href="#"><div>Електросистема</div></a>
+      <a class="item_categoriys" href="#"><div>Паливна система</div></a>
+      <a class="item_categoriys" href="#"><div>Гідравлічна система</div></a>
+      <a class="item_categoriys" href="#"><div>Запчастини для ТО</div></a>
+      <a class="item_categoriys" href="#"><div>Інші запчастини</div></a> `
     );
   }
 }
