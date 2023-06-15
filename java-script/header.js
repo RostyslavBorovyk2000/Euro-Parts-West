@@ -104,11 +104,11 @@ const btnArrowBottom = document.querySelector(".arrow_top_btn-bottom");
 const aboutUsImg = document.querySelector(".about_us-slider-img");
 const nextElementSibling = document.querySelector(".js-next");
 let arrAboutUs = [
-  "images/about-us/about-us-one.jpg",
+  "images/about-us/about-us-one.jpeg",
   "images/about-us/about-us-two.jpg",
   "images/about-us/about-us-three.jpg",
   "images/about-us/about-us-four.jpg",
-  "images/about-us/about-us-five.jpg",
+  "images/about-us/about-us-eleven.jpg",
   "images/about-us/about-us-six.jpg",
   "images/about-us/about-us-seven.jpg",
   "images/about-us/about-us-eight.jpg",

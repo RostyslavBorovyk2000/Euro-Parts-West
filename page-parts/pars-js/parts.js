@@ -49,14 +49,16 @@ closeAccept.addEventListener("click", () => {
 
 // Галерея запчастин
 
+const wrapperCategorys = document.querySelector(".wrapper_list-categoriys");
+const blockCard = document.querySelector(".block");
+const list = document.querySelector(".list_categoriys");
+
 class Categories {
   constructor(link) {
     this.link = link;
   }
 
   render() {
-    const list = document.querySelector(".list_categoriys");
-
     list.insertAdjacentHTML(
       "beforeend",
       ` <li class="item_categoriys">Двигун</li>
@@ -79,7 +81,10 @@ window.addEventListener("load", () => {
   const li = document.querySelectorAll(".item_categoriys");
 
   li.forEach(element => {
-    element.addEventListener("click", () => {});
+    element.addEventListener("click", () => {
+      wrapperCategorys.style.display = "none";
+      blockCard.style.display = "block";
+    });
   });
 });
 

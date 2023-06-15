@@ -391,6 +391,10 @@ body {
 
 /* Блок карток запчастин */
 
+.block {
+  display: none;
+}
+
 .all-products {
   display: flex;
   align-items: center;
