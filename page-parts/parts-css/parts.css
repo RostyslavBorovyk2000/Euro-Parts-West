@@ -391,6 +391,18 @@ body {
 
 /* Блок карток запчастин */
 
+.input_seurch-card {
+  display: flex;
+  margin: 0 auto 30px;
+  width: 70%;
+  padding: 20px;
+  border-radius: 25px;
+  border: none;
+  background: #3b3b3b;
+  color: #fff;
+  box-shadow: 0 2px 24px 0 rgba(239, 238, 238, 0.4);
+}
+
 .block {
   display: none;
 }
@@ -400,6 +412,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .product {
@@ -415,7 +428,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 1.2rem;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .product .product-title,

@@ -50,6 +50,7 @@ closeAccept.addEventListener("click", () => {
 // Галерея запчастин
 
 const wrapperCategorys = document.querySelector(".wrapper_list-categoriys");
+const wrapperInform = document.querySelector(".wrapper_block-inform");
 const blockCard = document.querySelector(".block");
 const list = document.querySelector(".list_categoriys");
 
@@ -75,19 +76,6 @@ class Categories {
   }
 }
 
-window.addEventListener("load", () => {
-  new Categories("link").render();
-
-  const li = document.querySelectorAll(".item_categoriys");
-
-  li.forEach(element => {
-    element.addEventListener("click", () => {
-      wrapperCategorys.style.display = "none";
-      blockCard.style.display = "block";
-    });
-  });
-});
-
 class Card {
   constructor(name, artNumber, linkImg) {
     this.name = name;
@@ -95,5 +83,139 @@ class Card {
     this.linkImg = linkImg;
   }
 
-  creatElement() {}
+  creatElement() {
+    const allProduct = document.querySelector(".all-products");
+
+    allProduct.insertAdjacentHTML(
+      "beforeend",
+      ` <div class="product">
+    <img src="../images/476954.jpg">
+    <div class="product-info">
+     <h4 class="product-title">Фільтр масляний мотора</h4>
+     <p class="product-price">476954</p>
+     <button class="product-btn">Замовити</button>
+    </div>
+   </div>
+
+   <div class="product">
+     <img src="../images/photo_2023-04-14_11-11-15.jpg">
+     <div class="product-info">
+      <h4 class="product-title">Фільтр масляний мотора</h4>
+      <p class="product-price">476954</p>
+      <button class="product-btn">Замовити</button>
+     </div>
+    </div>  
+
+    <div class="product">
+     <img src="../images/476954.jpg">
+     <div class="product-info">
+      <h4 class="product-title">Фільтр масляний мотора</h4>
+      <p class="product-price">476954</p>
+      <button class="product-btn">Замовити</button>
+     </div>
+    </div>
+
+    <div class="product">
+      <img src="../images/photo_2023-04-14_11-11-15.jpg">
+      <div class="product-info">
+       <h4 class="product-title">Фільтр масляний мотора</h4>
+       <p class="product-price">476954</p>
+       <button class="product-btn">Замовити</button>
+      </div>
+     </div>  
+
+     <div class="product">
+       <img src="../images/476954.jpg">
+       <div class="product-info">
+        <h4 class="product-title">Фільтр масляний мотора</h4>
+        <p class="product-price">476954</p>
+        <button class="product-btn">Замовити</button>
+       </div>
+      </div>
+
+      <div class="product">
+        <img src="../images/photo_2023-04-14_11-11-15.jpg">
+        <div class="product-info">
+         <h4 class="product-title">Фільтр масляний мотора</h4>
+         <p class="product-price">476954</p>
+         <button class="product-btn">Замовити</button>
+        </div>
+       </div>  
+
+       <div class="product">
+         <img src="../images/476954.jpg">
+         <div class="product-info">
+          <h4 class="product-title">Фільтр масляний мотора</h4>
+          <p class="product-price">476954</p>
+          <button class="product-btn">Замовити</button>
+         </div>
+        </div>
+
+        <div class="product">
+          <img src="../images/photo_2023-04-14_11-11-15.jpg">
+          <div class="product-info">
+           <h4 class="product-title">Фільтр масляний мотора</h4>
+           <p class="product-price">476954</p>
+           <button class="product-btn">Замовити</button>
+          </div>
+         </div>  
+
+         <div class="product">
+           <img src="../images/476954.jpg">
+           <div class="product-info">
+            <h4 class="product-title">Фільтр масляний мотора</h4>
+            <p class="product-price">476954</p>
+            <button class="product-btn">Замовити</button>
+           </div>
+          </div>
+
+          <div class="product">
+            <img src="../images/photo_2023-04-14_11-11-15.jpg">
+            <div class="product-info">
+             <h4 class="product-title">Фільтр масляний мотора</h4>
+             <p class="product-price">476954</p>
+             <button class="product-btn">Замовити</button>
+            </div>
+           </div>  
+
+           <div class="product">
+             <img src="../images/476954.jpg">
+             <div class="product-info">
+              <h4 class="product-title">Фільтр масляний мотора</h4>
+              <p class="product-price">476954</p>
+              <button class="product-btn">Замовити</button>
+             </div>
+            </div>
+
+            <div class="product">
+              <img src="../images/photo_2023-04-14_11-11-15.jpg">
+              <div class="product-info">
+               <h4 class="product-title">Фільтр масляний мотора</h4>
+               <p class="product-price">476954</p>
+               <button class="product-btn">Замовити</button>
+              </div>
+             </div>`
+    );
+  }
 }
+
+window.addEventListener("load", () => {
+  new Categories("link").render();
+  const li = document.querySelectorAll(".item_categoriys");
+  li.forEach(element => {
+    element.addEventListener("click", () => {
+      wrapperCategorys.style.display = "none";
+      wrapperInform.style.display = "none";
+      new Card("name", "artNumber", "linkImg").creatElement();
+      blockCard.style.display = "block";
+
+      const productBtn = document.querySelectorAll(".product-btn");
+      productBtn.forEach(element => {
+        element.addEventListener("click", () => {
+          form.style.display = "flex";
+          overflo.style.display = "block";
+        });
+      });
+    });
+  });
+});
