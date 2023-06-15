@@ -20,9 +20,11 @@ const send = document.querySelector(".wrapper-send");
 const sendAccept = document.querySelector(".accept-sign-up");
 const closeAccept = document.querySelector(".accept-close-img");
 const buttomWidthForm = document.querySelector(".service_buttom-width");
+const overflo = document.getElementById("overflo");
 
 buttomWidthForm.addEventListener("click", () => {
   form.style.display = "flex";
+  overflo.style.display = "block";
 });
 
 btnForm.addEventListener("click", () => {
@@ -35,8 +37,10 @@ send.addEventListener("click", () => {
 });
 closeForm.addEventListener("click", () => {
   form.style.display = "none";
+  overflo.style.display = "none";
 });
 
 closeAccept.addEventListener("click", () => {
   sendAccept.style.display = "none";
+  overflo.style.display = "none";
 });

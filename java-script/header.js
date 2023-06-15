@@ -138,8 +138,11 @@ const closeForm = document.querySelector(".close-img");
 const send = document.querySelector(".wrapper-send");
 const sendAccept = document.querySelector(".accept-sign-up");
 const closeAccept = document.querySelector(".accept-close-img");
+const overflo = document.getElementById("overflo");
+
 btnForm.addEventListener("click", () => {
   form.style.display = "flex";
+  overflo.style.display = "block";
 });
 
 send.addEventListener("click", () => {
@@ -148,8 +151,10 @@ send.addEventListener("click", () => {
 });
 closeForm.addEventListener("click", () => {
   form.style.display = "none";
+  overflo.style.display = "none";
 });
 
 closeAccept.addEventListener("click", () => {
   sendAccept.style.display = "none";
+  overflo.style.display = "none";
 });

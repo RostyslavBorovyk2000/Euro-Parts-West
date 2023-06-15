@@ -4,32 +4,47 @@ body {
   cursor: pointer;
 }
 
+#overflo {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9995;
+}
+
 .container {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Вікно замовлення  */
-
 .sign-up {
-  position: fixed;
   display: none;
-  align-items: center;
   justify-content: center;
-  width: 90%;
-  left: 6%;
-  top: 8%;
-  background: #373737;
-  border-radius: 15px;
-  z-index: 2;
+  align-items: center;
+  width: 85%;
+  background-color: #3b3b3b;
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.wrapper_img-close {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .close-img {
-  position: relative;
-  top: 15px;
-  left: 83%;
-  width: 15%;
+  width: 20px;
+  height: 20px;
 }
 
 .sing_up-title {
@@ -51,77 +66,67 @@ body {
   margin-bottom: 10px;
 }
 
-.sing_up_input_name {
+.sing_up_input_name,
+.sing_up_input_phone,
+.sing_up_input_inform {
+  background-color: #3b3b3b;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #fff;
   padding: 10px;
-  width: 100%;
-  color: #ffffff;
-  background: #3b3b3b;
-  border: 2px solid #ffffff;
-  border-radius: 20px;
   margin-bottom: 10px;
-}
-
-.sing_up_input_phone {
-  padding: 10px;
   width: 100%;
-  color: #ffffff;
-  background: #3b3b3b;
-  border: 2px solid #ffffff;
-  border-radius: 20px;
-  margin-top: 10px;
+  border-radius: 25px;
 }
 
 .sing_up_input_inform {
-  padding-left: 10px;
-  width: 100%;
-  height: 110px;
-  color: #ffffff;
-  background: #3b3b3b;
-  border: 2px solid #ffffff;
-  border-radius: 20px;
-  margin-top: 20px;
-  margin-bottom: 9px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  height: calc(2 * 20px);
 }
 
 .wrapper-send {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  background: #c00000;
-  padding: 5px;
-  margin-bottom: 15px;
-}
-
-.send-link-btn {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  color: #ffffff;
-  margin-right: 5px;
-  text-transform: uppercase;
-  cursor: pointer;
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 10px;
 }
 
 .send-link-img {
-  width: 25px;
-  margin-left: 5px;
+  width: 100%;
+  max-width: 30px;
+  height: auto;
+  margin-left: 10px;
 }
 
 .accept-sign-up {
-  position: fixed;
   display: none;
-  align-items: center;
   justify-content: center;
-  width: 90%;
-  left: 6%;
-  top: 8%;
-  background: #373737;
-  border-radius: 15px;
-  z-index: 2;
+  align-items: center;
+  background-color: #3b3b3b;
+  color: #fff;
+  width: 85%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.wrapper_img-close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.accept-close-img {
+  width: 20px;
+  height: 20px;
 }
 
 .accept-sing_up-title {
@@ -130,8 +135,6 @@ body {
   font-size: 17px;
   line-height: 34px;
   color: #ffffff;
-  margin-bottom: 10px;
-  margin-top: 25px;
 }
 
 .accept-sing_up-text {
@@ -140,21 +143,17 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: #ffffff;
-  margin-bottom: 25px;
+}
+
+.wrapper_img-sing-up {
+  display: flex;
+  justify-content: center;
 }
 
 .img-sing-up {
-  position: relative;
-  left: 25%;
-  width: 50%;
-  margin-bottom: 50px;
-}
-
-.accept-close-img {
-  position: relative;
-  top: 15px;
-  left: 83%;
-  width: 15%;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
 }
 
 .header {
@@ -474,34 +473,17 @@ body {
 }
 
 @media (min-width: 768px) {
-  /* Добавляємо та стилізуємо назву організації при розмірі більше 768px */
-
   /* Форма */
 
   .accept-sign-up {
-    width: 60%;
-    left: 20%;
+    width: 45%;
   }
 
   .sign-up {
-    width: 60%;
-    left: 20%;
-    top: 15%;
+    width: 45%;
   }
 
-  .close-img {
-    position: relative;
-    top: 15px;
-    left: 90%;
-    width: 10%;
-  }
-
-  .accept-close-img {
-    position: relative;
-    top: 15px;
-    left: 90%;
-    width: 10%;
-  }
+  /* Добавляємо та стилізуємо назву організації при розмірі більше 768px */
 
   .block_logo-name {
     display: flex;
@@ -638,10 +620,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .close-img {
-    top: 25px;
-    left: 88%;
-  }
+  /* Форма */
 
   .sing_up-title {
     font-size: 20px;
@@ -649,16 +628,11 @@ body {
 
   .sing_up-text {
     font-size: 17px;
-    margin-top: 10px;
-    margin-bottom: 25px;
   }
 
-  .sing_up_input_name {
-    padding: 20px;
-  }
-
-  .sing_up_input_phone {
-    padding: 20px;
+  .close-img {
+    width: 35px;
+    height: 35px;
   }
 
   .wrapper-send {
@@ -668,17 +642,21 @@ body {
   }
 
   .accept-sign-up {
-    width: 45%;
-    left: 30%;
-    top: 20%;
+    width: 25%;
   }
 
-  .sign-up {
-    width: 45%;
-    left: 30%;
-    top: 2%;
+  .accept-close-img {
+    width: 35px;
+    height: 35px;
   }
 
+  .accept-sing_up-title {
+    font-size: 17px;
+  }
+
+  .accept-sing_up-text {
+    font-size: 14px;
+  }
   /*Стилізуємо риску біля логотипа при розмірі 1024px*/
 
   .header_block-logo {

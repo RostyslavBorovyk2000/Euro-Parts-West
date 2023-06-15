@@ -20,25 +20,31 @@ const send = document.querySelector(".wrapper-send");
 const sendAccept = document.querySelector(".accept-sign-up");
 const closeAccept = document.querySelector(".accept-close-img");
 const btnWidht = document.querySelector(".block_inform_parts-btn-two");
+const overflo = document.getElementById("overflo");
 
 btnWidht.addEventListener("click", () => {
   form.style.display = "flex";
+  overflo.style.display = "block";
 });
 
 btnForm.addEventListener("click", () => {
   form.style.display = "flex";
+  overflo.style.display = "block";
 });
 
 send.addEventListener("click", () => {
   form.style.display = "none";
   sendAccept.style.display = "flex";
+  overflo.style.display = "block";
 });
 closeForm.addEventListener("click", () => {
   form.style.display = "none";
+  overflo.style.display = "none";
 });
 
 closeAccept.addEventListener("click", () => {
   sendAccept.style.display = "none";
+  overflo.style.display = "none";
 });
 
 // Галерея запчастин

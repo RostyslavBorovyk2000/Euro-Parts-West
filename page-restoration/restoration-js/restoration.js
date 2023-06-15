@@ -22,13 +22,16 @@ const closeAccept = document.querySelector(".accept-close-img");
 const buttomWidthForm = document.querySelector(
   ".restoration_btn-sing-up_buttom"
 );
+const overflo = document.getElementById("overflo");
 
 btnForm.addEventListener("click", () => {
   form.style.display = "flex";
+  overflo.style.display = "block";
 });
 
 buttomWidthForm.addEventListener("click", () => {
   form.style.display = "flex";
+  overflo.style.display = "block";
 });
 
 send.addEventListener("click", () => {
@@ -37,8 +40,10 @@ send.addEventListener("click", () => {
 });
 closeForm.addEventListener("click", () => {
   form.style.display = "none";
+  overflo.style.display = "none";
 });
 
 closeAccept.addEventListener("click", () => {
   sendAccept.style.display = "none";
+  overflo.style.display = "none";
 });
