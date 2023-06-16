@@ -1,4 +1,4 @@
-// Бар меню
+// Бар меню................................................................
 
 const btnDropDown = document.querySelector(".wrapper_button");
 const hrDropDown = document.querySelectorAll(".wrapper_button-line");
@@ -11,7 +11,7 @@ btnDropDown.addEventListener("click", () => {
   });
 });
 
-// Форма
+// Форма......................................................................
 
 const form = document.querySelector(".sign-up");
 const btnForm = document.querySelector(".block_inform_parts-btn");
@@ -21,6 +21,7 @@ const sendAccept = document.querySelector(".accept-sign-up");
 const closeAccept = document.querySelector(".accept-close-img");
 const btnWidht = document.querySelector(".block_inform_parts-btn-two");
 const overflo = document.getElementById("overflo");
+const phoneNumberInput = document.querySelector(".sing_up_input_phone");
 
 btnWidht.addEventListener("click", () => {
   form.style.display = "flex";
@@ -33,21 +34,30 @@ btnForm.addEventListener("click", () => {
 });
 
 send.addEventListener("click", () => {
+  const expectedNumber = 1234567890; // Введіть очікуваний номер тут (у числовому форматі)
+
+  const enteredNumber = parseInt(phoneNumberInput.value.trim()); // Отримати введений номер та перетворити на числове значення
+
+  if (enteredNumber != expectedNumber || isNaN(enteredNumber)) {
+    phoneNumberInput.style.borderColor = "red"; // Змініть колір рамки в червоний
+    return; // Припиніть виконання функції, якщо номер не співпадає або не є числом
+  }
   form.style.display = "none";
   sendAccept.style.display = "flex";
   overflo.style.display = "block";
+
+  closeAccept.addEventListener("click", () => {
+    sendAccept.style.display = "none";
+    overflo.style.display = "none";
+  });
 });
+
 closeForm.addEventListener("click", () => {
   form.style.display = "none";
   overflo.style.display = "none";
 });
 
-closeAccept.addEventListener("click", () => {
-  sendAccept.style.display = "none";
-  overflo.style.display = "none";
-});
-
-// Галерея запчастин
+// Галерея запчастин........................................................................
 
 const wrapperCategorys = document.querySelector(".wrapper_list-categoriys");
 const wrapperInform = document.querySelector(".wrapper_block-inform");
@@ -86,7 +96,6 @@ class Card {
 
   creatElement() {
     const allProduct = document.querySelector(".all-products");
-
     allProduct.insertAdjacentHTML(
       "beforeend",
       ` <div class="product">
@@ -105,97 +114,7 @@ class Card {
       <p class="product-price">476954</p>
       <button class="product-btn">Замовити</button>
      </div>
-    </div>  
-
-    <div class="product">
-     <img src="../images/476954.jpg">
-     <div class="product-info">
-      <h4 class="product-title">Фільтр масляний мотора</h4>
-      <p class="product-price">476954</p>
-      <button class="product-btn">Замовити</button>
-     </div>
-    </div>
-
-    <div class="product">
-      <img src="../images/photo_2023-04-14_11-11-15.jpg">
-      <div class="product-info">
-       <h4 class="product-title">Фільтр масляний мотора</h4>
-       <p class="product-price">476954</p>
-       <button class="product-btn">Замовити</button>
-      </div>
-     </div>  
-
-     <div class="product">
-       <img src="../images/476954.jpg">
-       <div class="product-info">
-        <h4 class="product-title">Фільтр масляний мотора</h4>
-        <p class="product-price">476954</p>
-        <button class="product-btn">Замовити</button>
-       </div>
-      </div>
-
-      <div class="product">
-        <img src="../images/photo_2023-04-14_11-11-15.jpg">
-        <div class="product-info">
-         <h4 class="product-title">Фільтр масляний мотора</h4>
-         <p class="product-price">476954</p>
-         <button class="product-btn">Замовити</button>
-        </div>
-       </div>  
-
-       <div class="product">
-         <img src="../images/476954.jpg">
-         <div class="product-info">
-          <h4 class="product-title">Фільтр масляний мотора</h4>
-          <p class="product-price">476954</p>
-          <button class="product-btn">Замовити</button>
-         </div>
-        </div>
-
-        <div class="product">
-          <img src="../images/photo_2023-04-14_11-11-15.jpg">
-          <div class="product-info">
-           <h4 class="product-title">Фільтр масляний мотора</h4>
-           <p class="product-price">476954</p>
-           <button class="product-btn">Замовити</button>
-          </div>
-         </div>  
-
-         <div class="product">
-           <img src="../images/476954.jpg">
-           <div class="product-info">
-            <h4 class="product-title">Фільтр масляний мотора</h4>
-            <p class="product-price">476954</p>
-            <button class="product-btn">Замовити</button>
-           </div>
-          </div>
-
-          <div class="product">
-            <img src="../images/photo_2023-04-14_11-11-15.jpg">
-            <div class="product-info">
-             <h4 class="product-title">Фільтр масляний мотора</h4>
-             <p class="product-price">476954</p>
-             <button class="product-btn">Замовити</button>
-            </div>
-           </div>  
-
-           <div class="product">
-             <img src="../images/476954.jpg">
-             <div class="product-info">
-              <h4 class="product-title">Фільтр масляний мотора</h4>
-              <p class="product-price">476954</p>
-              <button class="product-btn">Замовити</button>
-             </div>
-            </div>
-
-            <div class="product">
-              <img src="../images/photo_2023-04-14_11-11-15.jpg">
-              <div class="product-info">
-               <h4 class="product-title">Фільтр масляний мотора</h4>
-               <p class="product-price">476954</p>
-               <button class="product-btn">Замовити</button>
-              </div>
-             </div>`
+    </div>`
     );
   }
 }

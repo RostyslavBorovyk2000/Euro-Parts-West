@@ -393,7 +393,7 @@ body {
 
 .input_seurch-card {
   display: flex;
-  margin: 0 auto 30px;
+  margin: 30px auto;
   width: 70%;
   padding: 20px;
   border-radius: 25px;
