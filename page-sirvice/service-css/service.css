@@ -787,16 +787,14 @@ body {
   }
 
   .service_inform-text-one {
-    font-size: 20px;
-    width: 50%;
+    font-size: 25px;
     margin-bottom: 5px;
-    line-height: 25px;
+    line-height: 35px;
   }
 
   .service_inform-text-two {
-    font-size: 20px;
-    width: 50%;
-    line-height: 25px;
+    font-size: 25px;
+    line-height: 35px;
   }
 
   .service_item-categories_one,
