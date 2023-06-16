@@ -16,11 +16,23 @@ const inputText = document.querySelector(".sing_up_input_inform");
 
 const forms = () => {
   btnForm.addEventListener("click", () => {
+    phoneNumberInput.value = "";
+    imputName.value = "";
+    inputText.value = "";
+    imputName.style.borderColor = "grey";
+    phoneNumberInput.style.borderColor = "grey";
+    inputText.style.borderColor = "grey";
     form.style.display = "flex";
     overflo.style.display = "block";
   });
 
   buttomWidthForm.addEventListener("click", () => {
+    phoneNumberInput.value = "";
+    imputName.value = "";
+    inputText.value = "";
+    imputName.style.borderColor = "grey";
+    phoneNumberInput.style.borderColor = "grey";
+    inputText.style.borderColor = "grey";
     form.style.display = "flex";
     overflo.style.display = "block";
   });

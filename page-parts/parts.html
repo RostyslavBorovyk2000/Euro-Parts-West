@@ -28,7 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
       rel="stylesheet" />
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-    <script src="../page-parts/pars-js/parts.js" defer></script>
+    <script type="module" src="./java-script/main-parts.js" defer></script>
     <title>ЄВРО ПАРТС ЗАХІД</title>
   </head>
   <body>
@@ -132,21 +132,34 @@
     </header>
     <section class="parts">
         <div class="container">
-          <div class="block">
+          <div class="block hiden">
             <input class="input_seurch-card" type="text" placeholder="Пошук">
-            <div class="all-products"></div> 
+            <div class="all-products hidden"></div> 
           </div>
-          <div class="wrapper_block-inform">
-            <h2 class="block_inform_parts-title">Запчастини</h2>
-            <p class="block_inform_parts-text">Наші кваліфіковані менеджери завжди готові порадити та допомогти клієнтам у виборі необхідних запчастин.</p>
-            <p class="block_inform_parts-text-two">Наші кваліфіковані менеджери завжди готові порадити та допомогти клієнтам у виборі необхідних запчастин. Ми розуміємо, що кожен клієнт має свої унікальні потреби та бюджет, тому ми докладаємо максимум зусиль, щоб знайти оптимальне рішення та допомогти зекономити кошти.</p>
-            <button class="block_inform_parts-btn">дізнатися ціну та наявність</button>
-          </div>
-          <div class="wrapper_list-categoriys">
-            <hr class="hr_parts hr_parts-one"></hr>
-            <div class="list_categoriys"></div>
-
-           <button class="block_inform_parts-btn-two">дізнатися ціну та наявність</button>
+          <div class="js-wrapper">
+            <div class="wrapper_block-inform">
+              <h2 class="block_inform_parts-title">Запчастини</h2>
+              <p class="block_inform_parts-text">Наші кваліфіковані менеджери завжди готові порадити та допомогти клієнтам у виборі необхідних запчастин.</p>
+              <p class="block_inform_parts-text-two">Наші кваліфіковані менеджери завжди готові порадити та допомогти клієнтам у виборі необхідних запчастин. Ми розуміємо, що кожен клієнт має свої унікальні потреби та бюджет, тому ми докладаємо максимум зусиль, щоб знайти оптимальне рішення та допомогти зекономити кошти.</p>
+              <button class="block_inform_parts-btn">дізнатися ціну та наявність</button>
+            </div>
+            <div class="wrapper_list-categoriys">
+              <hr class="hr_parts hr_parts-one"></hr>
+              <div class="list_categoriys hiden">
+        <a class="item_categoriys" href="?category=engine"><div>Двигун</div></a>
+        <a class="item_categoriys" href="#"><div>КПП</div></a>
+        <a class="item_categoriys" href="?category=angleReducer"><div>Кутовий редуктор</div></a>
+        <a class="item_categoriys" href="?category=axel"><div>Мости</div></a>
+        <a class="item_categoriys" href="#"><div>Стріла</div></a>
+        <a class="item_categoriys" href="#"><div>Електросистема</div></a>
+        <a class="item_categoriys" href="#"><div>Паливна система</div></a>
+        <a class="item_categoriys" href="#"><div>Гідравлічна система</div></a>
+        <a class="item_categoriys" href="?category=filter"><div>Запчастини для ТО</div></a>
+        <a class="item_categoriys" href="#"><div>Інші запчастини</div></a>
+              </div>
+  
+             <button class="block_inform_parts-btn-two">дізнатися ціну та наявність</button>
+            </div>
           </div>
         </div>
     </section>

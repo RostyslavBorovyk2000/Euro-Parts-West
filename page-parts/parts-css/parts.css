@@ -4,6 +4,10 @@ body {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 #overflo {
   display: none;
   position: fixed;
@@ -401,10 +405,6 @@ body {
   background: #3b3b3b;
   color: #fff;
   box-shadow: 0 2px 24px 0 rgba(239, 238, 238, 0.4);
-}
-
-.block {
-  display: none;
 }
 
 .all-products {
