@@ -2,7 +2,6 @@
 
 const form = document.querySelector(".sign-up");
 const btnForm = document.querySelector(".block_inform_parts-btn");
-const productBtn = document.querySelector(".product-btn");
 const closeForm = document.querySelector(".close-img");
 const send = document.querySelector(".wrapper-send");
 const sendAccept = document.querySelector(".accept-sign-up");

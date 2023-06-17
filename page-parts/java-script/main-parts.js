@@ -99,12 +99,68 @@ class Card {
       </div>
      </div>`
     );
+    this.clickForm();
+  }
+
+  clickForm() {
+    const form = document.querySelector(".sign-up");
+    const closeForm = document.querySelector(".close-img");
+    const send = document.querySelector(".wrapper-send");
+    const sendAccept = document.querySelector(".accept-sign-up");
+    const closeAccept = document.querySelector(".accept-close-img");
+    const overflo = document.getElementById("overflo");
+    const phoneNumberInput = document.querySelector(".sing_up_input_phone");
+    const imputName = document.querySelector(".sing_up_input_name");
+    const inputText = document.querySelector(".sing_up_input_inform");
+    const partsBtn = document.querySelectorAll(".product-btn");
+
+    partsBtn.forEach(element => {
+      element.addEventListener("click", () => {
+        phoneNumberInput.value = "";
+        imputName.value = "";
+        inputText.value = "";
+        imputName.style.borderColor = "grey";
+        phoneNumberInput.style.borderColor = "grey";
+        inputText.style.borderColor = "grey";
+        form.style.display = "flex";
+        overflo.style.display = "block";
+      });
+
+      send.addEventListener("click", () => {
+        const expectedNumber = phoneNumberInput.value;
+        const enteredNumber = parseInt(phoneNumberInput.value.trim());
+        if (
+          enteredNumber != expectedNumber ||
+          isNaN(enteredNumber) ||
+          phoneNumberInput === "" ||
+          imputName === "" ||
+          inputText === ""
+        ) {
+          imputName.style.borderColor = "red";
+          phoneNumberInput.style.borderColor = "red";
+          inputText.style.borderColor = "red";
+          return;
+        }
+
+        form.style.display = "none";
+        sendAccept.style.display = "flex";
+        overflo.style.display = "block";
+
+        closeAccept.addEventListener("click", () => {
+          sendAccept.style.display = "none";
+          overflo.style.display = "none";
+        });
+      });
+
+      closeForm.addEventListener("click", () => {
+        form.style.display = "none";
+        overflo.style.display = "none";
+      });
+    });
   }
 }
 
 const categoryQueryParam = getQueryParam("category");
-console.log(categoryQueryParam);
-
 if (categoryQueryParam) {
   wrapperBlockInform.classList.add("hidden");
   mainContainer.classList.add("hidden");
