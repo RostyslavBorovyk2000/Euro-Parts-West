@@ -682,8 +682,12 @@ body {
 }
 
 .wrapper_block-phone {
-  width: 290px;
   margin-bottom: 10px;
+}
+
+.list_contact-phone {
+  margin-top: 27px;
+  margin-bottom: 23px;
 }
 
 .contact-phone {
@@ -1129,6 +1133,10 @@ body {
     font-size: 16px;
   }
 
+  .contact-phone {
+    font-size: 14px;
+  }
+
   .contact_inform_link-mail {
     font-size: 16px;
   }
@@ -1475,6 +1483,10 @@ body {
 
   .inform_location-text {
     font-size: 20px;
+  }
+
+  .contact-phone {
+    font-size: 18px;
   }
 
   .contact_inform_link-mail {
