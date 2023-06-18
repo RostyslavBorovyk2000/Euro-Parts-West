@@ -4,6 +4,11 @@ body {
   cursor: pointer;
 }
 
+.max-widht {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .container {
   width: 95%;
   margin-left: auto;

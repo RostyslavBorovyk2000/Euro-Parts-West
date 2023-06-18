@@ -4,6 +4,11 @@ body {
   cursor: pointer;
 }
 
+.max-widht {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 #overflo {
   display: none;
   position: fixed;
@@ -358,6 +363,10 @@ body {
   margin-bottom: 21px;
 }
 
+.restoration_btn-sing-up:hover {
+  box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
+}
+
 .wrapper_list-infrom {
   display: flex;
   justify-content: space-between;
@@ -565,6 +574,10 @@ body {
     border: none;
     border-radius: 5px;
     margin-bottom: 21px;
+  }
+
+  .restoration_btn-sing-up_buttom:hover {
+    box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
   }
 
   /* Футер */

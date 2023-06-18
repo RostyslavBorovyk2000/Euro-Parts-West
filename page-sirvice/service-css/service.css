@@ -4,6 +4,11 @@ body {
   cursor: pointer;
 }
 
+.max-widht {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 #overflo {
   display: none;
   position: fixed;
@@ -337,6 +342,9 @@ body {
   border-radius: 5px;
   border: none;
   margin-bottom: 18px;
+}
+.record-service:hover {
+  box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
 }
 
 .service_item-categories_one {
@@ -821,6 +829,10 @@ body {
     border: none;
     margin-top: 50px;
     text-align: center;
+  }
+
+  .service_buttom-width:hover {
+    box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
   }
 
   /* Футер */

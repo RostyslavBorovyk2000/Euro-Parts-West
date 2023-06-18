@@ -4,6 +4,11 @@ body {
   cursor: pointer;
 }
 
+.max-widht {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .hidden {
   display: none;
 }
@@ -341,7 +346,7 @@ body {
 }
 
 .block_inform_parts-btn:hover {
-  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+  box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
 }
 
 .block_inform_parts-btn-two {
@@ -361,7 +366,7 @@ body {
 }
 
 .block_inform_parts-btn-two:hover {
-  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+  box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
 }
 
 .hr_parts {
@@ -392,7 +397,7 @@ body {
 
 .item_categoriys:hover {
   background: #c00000;
-  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+  box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
 }
 
 /* Блок карток запчастин */
@@ -443,7 +448,7 @@ body {
 }
 
 .product:hover {
-  box-shadow: 5px 15px 25px #eeeeee;
+  box-shadow: 5px 15px 25px #000000;
   background: #c00000;
 }
 

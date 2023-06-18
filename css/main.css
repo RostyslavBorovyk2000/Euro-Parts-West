@@ -4,6 +4,11 @@ body {
   cursor: pointer;
 }
 
+.max-widht {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 #overflo {
   display: none;
   position: fixed;
@@ -87,7 +92,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background: #df7f7f;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -347,7 +352,7 @@ body {
 }
 
 .header_block_inform-btn:hover {
-  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+  box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
 }
 
 .block_inform-positions {
@@ -481,7 +486,7 @@ body {
 }
 
 .js-service_block-btn:hover {
-  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+  box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
 }
 
 .wrapper_service-gallery-img {
@@ -551,7 +556,7 @@ body {
 }
 
 .restoration-btn:hover {
-  box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+  box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
 }
 
 /* Стилізуємо блок із запчастинами */
@@ -901,6 +906,7 @@ body {
 
   .block_inform-circle:hover {
     background: #c00000;
+    box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
   }
 
   /* Секція програми лоялності розмір більше ніж 768px */
@@ -971,7 +977,7 @@ body {
   }
 
   .service_block-btn:hover {
-    box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+    box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
   }
 
   .service_slider-arrow-left {
@@ -1083,7 +1089,7 @@ body {
     width: 60%;
   }
   .parts-btn:hover {
-    box-shadow: inset 0 4px 12px rgba(77, 4, 4, 0.4);
+    box-shadow: rgba(77, 4, 4, 0.9) 0px 4px 12px inset;
   }
 
   /*  Блок із контактами  */
@@ -1391,7 +1397,6 @@ body {
     display: block;
     position: relative;
     top: -100px;
-    left: 70%;
     font-weight: 400;
     font-size: 20px;
     line-height: 133%;
@@ -1399,7 +1404,7 @@ body {
     border-radius: 25px;
     padding: 20px;
     background-color: #3b3b3b;
-    width: 30%;
+    width: 45%;
   }
 
   /* Стилі для блоку реставрації при розмірі в 1024px */
