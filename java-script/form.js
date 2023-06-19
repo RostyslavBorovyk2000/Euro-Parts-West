@@ -21,6 +21,17 @@ const forms = () => {
     inputText.style.borderColor = "grey";
     form.style.display = "flex";
     overflo.style.display = "block";
+
+    imputName.addEventListener("input", updateButtonColor);
+    phoneNumberInput.addEventListener("input", updateButtonColor);
+
+    function updateButtonColor() {
+      if (imputName.value.length > 0 && phoneNumberInput.value.length > 0) {
+        send.style.background = "#C00000";
+      } else {
+        send.style.background = "";
+      }
+    }
   });
 
   send.addEventListener("click", () => {

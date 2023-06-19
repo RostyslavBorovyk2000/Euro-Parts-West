@@ -92,7 +92,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background: #df7f7f;
   color: #fff;
   border: none;
   padding: 10px 20px;
