@@ -1313,6 +1313,10 @@ body {
     color: #ffffff;
   }
 
+  .header_menu-item:nth-child(1) {
+    border-bottom: 2px solid #daa640;
+  }
+
   .header_menu-link:hover {
     color: #c00000;
   }
