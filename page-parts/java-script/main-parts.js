@@ -8,77 +8,16 @@ burger();
 forms();
 
 // Галерея запчастин........................................................................
-const categoriesData = {
-  engine: [
-    {
-      name: "Прокладка перед. кришки",
-      urlImg:
-        "https://servua.com/content/images/17/480x480l50nn0/28894488531392.png",
-      artNumber: 702056,
-    },
-    {
-      name: "Електро вентелятор",
-      urlImg:
-        "https://www.ats-parts.com.ua/image/catalog/Manitou/564055/564055%20Manitou%20original.jpg",
-      artNumber: 564055,
-    },
-  ],
-
-  filter: [
-    {
-      name: "Повітряний (зов)",
-      urlImg:
-        "https://agroimport.in.ua/image/cache/catalog/demo/image/data/Manitou/563416(5)ds-2000x2000.jpg",
-      artNumber: 563416,
-    },
-    {
-      name: "Повітряний (внут)",
-      urlImg:
-        "https://agroimport.in.ua/image/cache/catalog/demo/image/data/Manitou/563415(GFD)(3)-2000x2000.jpg",
-      artNumber: 563415,
-    },
-  ],
-
-  axel: [
-    {
-      name: "Підшипник бортової",
-      urlImg:
-        "https://servua.com/content/images/1/480x480l50nn0/52037831113666.png",
-      artNumber: 562504,
-    },
-    {
-      name: "Сальник бортової",
-      urlImg:
-        "https://promspectech.com.ua/image/cache/catalog/Forklifts/Manitou/salnik-604656-500x500.jpg",
-      artNumber: 604656,
-    },
-  ],
-
-  angleReducer: [
-    {
-      name: "Вал довгий",
-      urlImg:
-        "https://promspectech.com.ua/image/cache/catalog/Forklifts/Manitou/val-563789-500x500.jpg",
-      artNumber: 563789,
-    },
-    {
-      name: "Вал короткий",
-      urlImg:
-        "https://www.ats-parts.com.ua/image/catalog/Manitou/563787/563787.jpg",
-      artNumber: 563787,
-    },
-  ],
-};
 
 const mainContainer = document.querySelector(".list_categoriys");
 const categoriesContainer = document.querySelector(".all-products");
 const block = document.querySelector(".block");
 const wrapperBlockInform = document.querySelector(".js-wrapper");
 
-const getQueryParam = param => {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-};
+// const getQueryParam = param => {
+//   const urlParams = new URLSearchParams(window.location.search);
+//   return urlParams.get(param);
+// };
 
 class Card {
   constructor(name, urlImg, artNumber) {
@@ -170,20 +109,24 @@ class Card {
     });
   }
 }
+const btnCategoris = document.querySelectorAll(".item_categoriys");
+btnCategoris.forEach(element => {
+  element.addEventListener("click", event => {
+    event.preventDefault();
+    const categorisId = event.target.getAttribute("data-id");
 
-const categoryQueryParam = getQueryParam("category");
-if (categoryQueryParam) {
-  wrapperBlockInform.classList.add("hidden");
-  mainContainer.classList.add("hidden");
-  block.classList.remove("hidden");
-
-  const categoryData = categoriesData[categoryQueryParam];
-  categoryData.forEach(cardData => {
-    const card = new Card(cardData.name, cardData.urlImg, cardData.artNumber);
-    card.render(categoriesContainer);
+    axios
+      .get(`http://127.0.01:8000/api/categories/${categorisId}`)
+      .then(({ data }) => {
+        if (categorisId == data.id) {
+          const products = data.products;
+          products.forEach(({ name, image_url, article }) => {
+            wrapperBlockInform.classList.add("hidden");
+            mainContainer.classList.add("hidden");
+            block.classList.remove("hidden");
+            new Card(name, image_url, article).render();
+          });
+        }
+      });
   });
-} else {
-  wrapperBlockInform.classList.remove("hidden");
-  mainContainer.classList.remove("hidden");
-  block.classList.add("hidden");
-}
+});
