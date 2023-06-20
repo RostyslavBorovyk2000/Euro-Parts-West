@@ -9,16 +9,6 @@ forms();
 
 // Галерея запчастин........................................................................
 
-const mainContainer = document.querySelector(".list_categoriys");
-const categoriesContainer = document.querySelector(".all-products");
-const block = document.querySelector(".block");
-const wrapperBlockInform = document.querySelector(".js-wrapper");
-
-// const getQueryParam = param => {
-//   const urlParams = new URLSearchParams(window.location.search);
-//   return urlParams.get(param);
-// };
-
 class Card {
   constructor(name, urlImg, artNumber) {
     this.name = name;
@@ -109,7 +99,68 @@ class Card {
     });
   }
 }
+
+const mainContainer = document.querySelector(".list_categoriys");
+const categoriesContainer = document.querySelector(".all-products");
+const block = document.querySelector(".block");
+const wrapperBlockInform = document.querySelector(".js-wrapper");
+
+// const categoriesData = {
+//   engine: [
+//     {
+//       name: "Прокладка перед. кришки",
+//       urlImg:
+//         "https://servua.com/content/images/17/480x480l50nn0/28894488531392.png",
+//       artNumber: 702056,
+//     },
+//     {
+//       name: "Електро вентелятор",
+//       urlImg:
+//         "https://www.ats-parts.com.ua/image/catalog/Manitou/564055/564055%20Manitou%20original.jpg",
+//       artNumber: 564055,
+//     },
+//   ],
+
+//   filter: [
+//     {
+//       name: "Повітряний (зов)",
+//       urlImg:
+//         "https://agroimport.in.ua/image/cache/catalog/demo/image/data/Manitou/563416(5)ds-2000x2000.jpg",
+//       artNumber: 563416,
+//     },
+//     {
+//       name: "Повітряний (внут)",
+//       urlImg:
+//         "https://agroimport.in.ua/image/cache/catalog/demo/image/data/Manitou/563415(GFD)(3)-2000x2000.jpg",
+//       artNumber: 563415,
+//     },
+//   ],
+// };
+
+// const getQueryParam = param => {
+//   const urlParams = new URLSearchParams(window.location.search);
+//   return urlParams.get(param);
+// };
+
+// const categoryQueryParam = getQueryParam("categories");
+// console.log(categoryQueryParam);
+// if (categoryQueryParam) {
+//   wrapperBlockInform.classList.add("hidden");
+//   mainContainer.classList.add("hidden");
+//   block.classList.remove("hidden");
+//   const categoryData = categoriesData[categoryQueryParam];
+//   categoryData.forEach(cardData => {
+//     const card = new Card(cardData.name, cardData.urlImg, cardData.artNumber);
+//     card.render(categoriesContainer);
+//   });
+// } else {
+//   wrapperBlockInform.classList.remove("hidden");
+//   mainContainer.classList.remove("hidden");
+//   block.classList.add("hidden");
+// }
+
 const btnCategoris = document.querySelectorAll(".item_categoriys");
+
 btnCategoris.forEach(element => {
   element.addEventListener("click", event => {
     event.preventDefault();
@@ -118,6 +169,7 @@ btnCategoris.forEach(element => {
     axios
       .get(`http://127.0.01:8000/api/categories/${categorisId}`)
       .then(({ data }) => {
+        console.log(data);
         if (categorisId == data.id) {
           const products = data.products;
           products.forEach(({ name, image_url, article }) => {
