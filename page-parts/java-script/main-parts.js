@@ -100,10 +100,10 @@ class Card {
   }
 }
 
-const mainContainer = document.querySelector(".list_categoriys");
-const categoriesContainer = document.querySelector(".all-products");
-const block = document.querySelector(".block");
-const wrapperBlockInform = document.querySelector(".js-wrapper");
+// const mainContainer = document.querySelector(".list_categoriys");
+// const categoriesContainer = document.querySelector(".all-products");
+// const block = document.querySelector(".block");
+// const wrapperBlockInform = document.querySelector(".js-wrapper");
 
 // const categoriesData = {
 //   engine: [
@@ -159,6 +159,40 @@ const wrapperBlockInform = document.querySelector(".js-wrapper");
 //   block.classList.add("hidden");
 // }
 
+// const btnCategoris = document.querySelectorAll(".item_categoriys");
+
+// btnCategoris.forEach(element => {
+//   element.addEventListener("click", event => {
+//     event.preventDefault();
+//     const categorisId = event.target.getAttribute("data-id");
+
+//     axios
+//       .get(`http://127.0.01:8000/api/categories/${categorisId}`)
+//       .then(({ data }) => {
+//         console.log(data);
+//         if (categorisId == data.id) {
+//           const products = data.products;
+//           products.forEach(({ name, image_url, article }) => {
+//             wrapperBlockInform.classList.add("hidden");
+//             mainContainer.classList.add("hidden");
+//             block.classList.remove("hidden");
+//             new Card(name, image_url, article).render();
+//           });
+//         }
+//       });
+//   });
+// });
+
+const mainContainer = document.querySelector(".list_categoriys");
+const categoriesContainer = document.querySelector(".all-products");
+const block = document.querySelector(".block");
+const wrapperBlockInform = document.querySelector(".js-wrapper");
+
+const getQueryParam = param => {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+};
+
 const btnCategoris = document.querySelectorAll(".item_categoriys");
 
 btnCategoris.forEach(element => {
@@ -171,11 +205,12 @@ btnCategoris.forEach(element => {
       .then(({ data }) => {
         console.log(data);
         if (categorisId == data.id) {
+          wrapperBlockInform.classList.add("hidden");
+          mainContainer.classList.add("hidden");
+          block.classList.remove("hidden");
+          categoriesContainer.innerHTML = "";
           const products = data.products;
           products.forEach(({ name, image_url, article }) => {
-            wrapperBlockInform.classList.add("hidden");
-            mainContainer.classList.add("hidden");
-            block.classList.remove("hidden");
             new Card(name, image_url, article).render();
           });
         }

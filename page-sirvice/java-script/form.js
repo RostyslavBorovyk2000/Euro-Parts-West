@@ -73,6 +73,14 @@ const forms = () => {
       return;
     }
 
+    const requestData = {
+      to_email: "europartswest1@gmail.com",
+      subject: "rostykfox911@gmail.com",
+      message: `Імя ${imputName.value} Телефон ${phoneNumberInput.value} ${inputText.value}`,
+    };
+    console.log(requestData);
+    axios.post("http://127.0.0.1:8000/api/send-email", requestData);
+
     form.style.display = "none";
     sendAccept.style.display = "flex";
     overflo.style.display = "block";
