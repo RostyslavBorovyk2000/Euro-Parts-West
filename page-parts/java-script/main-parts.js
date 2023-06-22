@@ -1,5 +1,6 @@
 import burger from "./bar-menu.js";
 import forms from "./form.js";
+import Card from "./Card-parts.js";
 
 // Запускаємо імпортовану функцію для БАР МЕНЮ;
 burger();
@@ -8,180 +9,6 @@ burger();
 forms();
 
 // Галерея запчастин........................................................................
-
-class Card {
-  constructor(name, urlImg, artNumber) {
-    this.name = name;
-    this.urlImg = urlImg;
-    this.artNumber = artNumber;
-  }
-
-  render() {
-    categoriesContainer.insertAdjacentHTML(
-      "beforeend",
-      ` <div class="product">
-      <img src="${this.urlImg}">
-      <div class="product-info">
-       <h4 class="product-title">${this.name}</h4>
-       <p class="product-price">${this.artNumber}</p>
-       <button class="product-btn">Замовити</button>
-      </div>
-     </div>`
-    );
-    this.clickForm();
-  }
-
-  clickForm() {
-    const form = document.querySelector(".sign-up");
-    const closeForm = document.querySelector(".close-img");
-    const send = document.querySelector(".wrapper-send");
-    const sendAccept = document.querySelector(".accept-sign-up");
-    const closeAccept = document.querySelector(".accept-close-img");
-    const overflo = document.getElementById("overflo");
-    const phoneNumberInput = document.querySelector(".sing_up_input_phone");
-    const imputName = document.querySelector(".sing_up_input_name");
-    const inputText = document.querySelector(".sing_up_input_inform");
-    const partsBtn = document.querySelectorAll(".product-btn");
-
-    partsBtn.forEach(element => {
-      element.addEventListener("click", () => {
-        phoneNumberInput.value = "";
-        imputName.value = "";
-        inputText.value = "";
-        imputName.style.borderColor = "grey";
-        phoneNumberInput.style.borderColor = "grey";
-        inputText.style.borderColor = "grey";
-        form.style.display = "flex";
-        overflo.style.display = "block";
-
-        imputName.addEventListener("input", updateButtonColor);
-        phoneNumberInput.addEventListener("input", updateButtonColor);
-
-        function updateButtonColor() {
-          if (imputName.value.length > 0 && phoneNumberInput.value.length > 0) {
-            send.style.background = "#C00000";
-          } else {
-            send.style.background = "";
-          }
-        }
-      });
-
-      send.addEventListener("click", () => {
-        const expectedNumber = phoneNumberInput.value;
-        const enteredNumber = parseInt(phoneNumberInput.value.trim());
-        if (
-          enteredNumber != expectedNumber ||
-          isNaN(enteredNumber) ||
-          phoneNumberInput === "" ||
-          imputName === "" ||
-          inputText === ""
-        ) {
-          imputName.style.borderColor = "red";
-          phoneNumberInput.style.borderColor = "red";
-          inputText.style.borderColor = "red";
-          return;
-        }
-
-        form.style.display = "none";
-        sendAccept.style.display = "flex";
-        overflo.style.display = "block";
-
-        closeAccept.addEventListener("click", () => {
-          sendAccept.style.display = "none";
-          overflo.style.display = "none";
-        });
-      });
-
-      closeForm.addEventListener("click", () => {
-        form.style.display = "none";
-        overflo.style.display = "none";
-      });
-    });
-  }
-}
-
-// const mainContainer = document.querySelector(".list_categoriys");
-// const categoriesContainer = document.querySelector(".all-products");
-// const block = document.querySelector(".block");
-// const wrapperBlockInform = document.querySelector(".js-wrapper");
-
-// const categoriesData = {
-//   engine: [
-//     {
-//       name: "Прокладка перед. кришки",
-//       urlImg:
-//         "https://servua.com/content/images/17/480x480l50nn0/28894488531392.png",
-//       artNumber: 702056,
-//     },
-//     {
-//       name: "Електро вентелятор",
-//       urlImg:
-//         "https://www.ats-parts.com.ua/image/catalog/Manitou/564055/564055%20Manitou%20original.jpg",
-//       artNumber: 564055,
-//     },
-//   ],
-
-//   filter: [
-//     {
-//       name: "Повітряний (зов)",
-//       urlImg:
-//         "https://agroimport.in.ua/image/cache/catalog/demo/image/data/Manitou/563416(5)ds-2000x2000.jpg",
-//       artNumber: 563416,
-//     },
-//     {
-//       name: "Повітряний (внут)",
-//       urlImg:
-//         "https://agroimport.in.ua/image/cache/catalog/demo/image/data/Manitou/563415(GFD)(3)-2000x2000.jpg",
-//       artNumber: 563415,
-//     },
-//   ],
-// };
-
-// const getQueryParam = param => {
-//   const urlParams = new URLSearchParams(window.location.search);
-//   return urlParams.get(param);
-// };
-
-// const categoryQueryParam = getQueryParam("categories");
-// console.log(categoryQueryParam);
-// if (categoryQueryParam) {
-//   wrapperBlockInform.classList.add("hidden");
-//   mainContainer.classList.add("hidden");
-//   block.classList.remove("hidden");
-//   const categoryData = categoriesData[categoryQueryParam];
-//   categoryData.forEach(cardData => {
-//     const card = new Card(cardData.name, cardData.urlImg, cardData.artNumber);
-//     card.render(categoriesContainer);
-//   });
-// } else {
-//   wrapperBlockInform.classList.remove("hidden");
-//   mainContainer.classList.remove("hidden");
-//   block.classList.add("hidden");
-// }
-
-// const btnCategoris = document.querySelectorAll(".item_categoriys");
-
-// btnCategoris.forEach(element => {
-//   element.addEventListener("click", event => {
-//     event.preventDefault();
-//     const categorisId = event.target.getAttribute("data-id");
-
-//     axios
-//       .get(`http://127.0.01:8000/api/categories/${categorisId}`)
-//       .then(({ data }) => {
-//         console.log(data);
-//         if (categorisId == data.id) {
-//           const products = data.products;
-//           products.forEach(({ name, image_url, article }) => {
-//             wrapperBlockInform.classList.add("hidden");
-//             mainContainer.classList.add("hidden");
-//             block.classList.remove("hidden");
-//             new Card(name, image_url, article).render();
-//           });
-//         }
-//       });
-//   });
-// });
 
 const mainContainer = document.querySelector(".list_categoriys");
 const categoriesContainer = document.querySelector(".all-products");
@@ -193,21 +20,19 @@ const getQueryParam = param => {
   return urlParams.get(param);
 };
 
-const btnCategoris = document.querySelectorAll(".item_categoriys");
-
-btnCategoris.forEach(element => {
-  element.addEventListener("click", event => {
-    event.preventDefault();
-    const categorisId = event.target.getAttribute("data-id");
-
+window.addEventListener("popstate", event => {
+  event.preventDefault();
+  const state = event.state;
+  if (state && state.category) {
+    const categoryQueryParam = state.category;
+    wrapperBlockInform.classList.add("hidden");
+    mainContainer.classList.add("hidden");
+    block.classList.remove("hidden");
     axios
-      .get(`http://127.0.01:8000/api/categories/${categorisId}`)
+      .get(`http://127.0.01:8000/api/categories/${categoryQueryParam}`)
       .then(({ data }) => {
         console.log(data);
-        if (categorisId == data.id) {
-          wrapperBlockInform.classList.add("hidden");
-          mainContainer.classList.add("hidden");
-          block.classList.remove("hidden");
+        if (categoryQueryParam == data.id) {
           categoriesContainer.innerHTML = "";
           const products = data.products;
           products.forEach(({ name, image_url, article }) => {
@@ -215,5 +40,40 @@ btnCategoris.forEach(element => {
           });
         }
       });
-  });
+  } else {
+    wrapperBlockInform.classList.remove("hidden");
+    mainContainer.classList.remove("hidden");
+    block.classList.add("hidden");
+  }
 });
+
+const categoryQueryParam = getQueryParam("categories");
+if (categoryQueryParam) {
+  wrapperBlockInform.classList.add("hidden");
+  mainContainer.classList.add("hidden");
+  block.classList.remove("hidden");
+  axios
+    .get(`http://127.0.01:8000/api/categories/${categoryQueryParam}`)
+    .then(({ data }) => {
+      console.log(data);
+      if (categoryQueryParam == data.id) {
+        categoriesContainer.innerHTML = "";
+        const products = data.products;
+        products.forEach(({ name, image_url, article }) => {
+          new Card(name, image_url, article).render();
+        });
+      }
+    })
+    .catch(error => {
+      if (error.response && error.response.status === 404) {
+        console.log("Страницю не знайдено");
+      } else {
+        console.log("Сталася помилка при отриманні даних");
+        console.error(error);
+      }
+    });
+} else {
+  wrapperBlockInform.classList.remove("hidden");
+  mainContainer.classList.remove("hidden");
+  block.classList.add("hidden");
+}
