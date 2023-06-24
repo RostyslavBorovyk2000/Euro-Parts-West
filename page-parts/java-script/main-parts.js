@@ -20,6 +20,7 @@ const input = document.querySelector(".input_seurch-card");
 
 const filterCards = () => {
   const cards = document.querySelectorAll(".product");
+  const inputValue = input.value.toLowerCase().trim();
 
   cards.forEach(card => {
     const cardTitle = card
@@ -28,7 +29,6 @@ const filterCards = () => {
     const cardArtNumber = card
       .querySelector(".product-price")
       .textContent.toLowerCase();
-    const inputValue = input.value.toLowerCase();
 
     if (cardTitle.includes(inputValue) || cardArtNumber.includes(inputValue)) {
       card.style.display = "block";
